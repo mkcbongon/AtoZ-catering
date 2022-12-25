@@ -41,6 +41,7 @@ $routes->get('/packages', 'Package::packages');
 $routes->get('/user_package', 'Package::user_package', ['filter'=>'isLogin']);
 $routes->get('/cart', 'Package::cart', ['filter'=>'isLogin']);
 $routes->match(['get', 'post'], "/addtocart", "Package::addtocart", ['filter' =>'isLogin']);
+$routes->match(['get', 'post'], "/addqty", "Package::addqty", ['filter' =>'isLogin']);
 $routes->get('/search/(:any)', 'Package::search/$1');
 $routes->get('/about', 'AtoZ::about');
 $routes->get('/shop', 'AtoZ::shop');

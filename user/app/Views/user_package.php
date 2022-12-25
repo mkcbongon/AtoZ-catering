@@ -196,6 +196,7 @@
 
         // TO DO ON FAIL
         .fail(function (jqxhr, settings, ex) {
+          console.log(jqxhr);
           alert("failed, " + ex);
         });
       });

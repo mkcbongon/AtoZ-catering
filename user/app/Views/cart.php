@@ -15,7 +15,8 @@
       <meta name="author" content="">
       <!-- bootstrap css -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-      <!-- style css -->
+      <!-- style css --> 
+      <link rel="stylesheet" type="text/css" href="<?=base_url()?>/style.css">
       <link rel="stylesheet" type="text/css" href="css/style.css">
       
       <link rel="stylesheet" type="text/css" href="/prod_style.css">
@@ -66,47 +67,59 @@
                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
                </button>
              </div>
-             <div class="product-cell status-cell">Status<button class="sort-button">
+             <div class="product-cell status-cell">Product Status<button class="sort-button">
                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
                </button></div>
+               <!-- <div class="product-cell status-cell">Order Status<button class="sort-button">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
+               </button></div> -->
              <div class="product-cell price">Price<button class="sort-button">
                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
                </button></div>
              <div class="product-cell category">Quantity<button class="sort-button">
                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
                </button></div>
+             <div class="product-cell price">Total<button class="sort-button">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
+               </button></div>
            </div>
            
            
             <?php foreach ($cart as $cart): ?>
-            
+            <?php if($cart['order_stat']==2)?>
            <div class="products-row">
                <div class="product-cell image">
                  <img src="<?=$cart['img']?>" alt=""> <!-- Product Image -->
                  <span><?=$cart['item']?></span> <!-- Product Name -->
                </div>
              <div class="product-cell status-cell">
-               <span class="cell-label">Status:</span>
-                <?php if($cart['status']==1)
+               <span class="cell-label">Product Status:</span>
+                <?php if($cart['product_stat']==1)
                 echo '<span class="status active">Available</span>';
                 else
                 echo '<span class="status disabled">Out of Stock</span>';
                ?></span>
+               
              </div>
-             <div class="product-cell price"><span class="cell-label">Price:</span>₱<?=$cart['price']?></div>
-             <!-- <div class="product-cell stock"><span class="cell-label"></span><input id=demoInput type=number min=100 max=110>
-<button onclick="increment()">+</button>
-<button onclick="decrement()">-</button>
-<script>
-   function increment() {
-      document.getElementById('demoInput').stepUp();
-   }
-   function decrement() {
-      document.getElementById('demoInput').stepDown();
-   }
-</script> -->
-</div>
-           
+             
+             <div class="product-cell price"><span class="cell-label" >Price:</span>₱<span id = "price<?=$cart['id']?>"><?=$cart['price']?></span></div>
+             <div class="product-cell stock"><span class="cell-label"></span>
+              <!-- <button class="btn-sm" onclick="decrement()">-</button> -->
+              <div class="pro-qty" >
+                <input id='<?=$cart['id']?>' type=number value="<?=$cart['quantity']?>" min=1 max=100 readonly>
+              </div>
+              <!-- <button class="btn-sm" onclick="increment()">+</button> -->
+              <script>
+                function increment() {
+                    document.getElementById('demoInput').stepUp();
+                }
+                function decrement() {
+                    document.getElementById('demoInput').stepDown();
+                }
+              </script>
+          </div>  
+            <div class="product-cell price"><span class="cell-label" >Total:</span><span id="total<?=$cart['id']?>">₱<?=$cart['price']*$cart['quantity']?></span></div>
+        </div>
            
            <?php endforeach; ?>
            </div>
@@ -133,5 +146,57 @@
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>   
        
       <script  src="<?=base_url()?>/script.js"></script>
+      <script>
+        var proQty = $(".pro-qty");
+        proQty.prepend('<span class="dec qtybtn btn">-</span>');
+  proQty.append('<span class="inc qtybtn btn">+</span>');
+  proQty.on("click", ".qtybtn", function () {
+    var $button = $(this);
+    var oldValue = $button.parent().find("input").val();
+    var id = $button.parent().find("input").attr("id");
+    var price = document.getElementById('price'+id).innerHTML;
+    var newVal;
+    if ($button.hasClass("inc")) {
+        newVal = parseInt(oldValue) + 1;
+    } else {
+      // Don't allow decrementing below zero
+      if (oldValue > 1) {
+          newVal = parseInt(oldValue) - 1;
+      }
+      else 
+        newVal = 1;
+    }
+    console.log(newVal);
+    $.post(
+      '<?=base_url()?>/addqty',
+      // DATA TO PASS
+      {
+        qty: newVal,
+        id: id
+      },
+      function (data, status, xhr) {
+        console.log(price);
+        // var pid = "total" + id.trim();
+        // var total = data["single"]["prod_price"] * data["single"]["quantity"];
+        // document.getElementById(pid).innerHTML = "₱ " + total.toFixed(2);
+        // document.getElementById("grand").innerHTML = "₱  " + (data["total"][0]["total"]).toFixed(2);
+        // if (oldValue.substring(oldValue.indexOf(' ') + 1) == 'kg')
+          $button.parent().find("input").val(newVal);
+          document.getElementById('total'+id).innerHTML = "₱ " + price * newVal;
+        // else
+        //   $button.parent().find("input").val(newVal);
+      }
+    )
+
+      // TO DO ON SUCCESS
+      .done(function () { })
+
+      // TO DO ON FAIL
+      .fail(function (jqxhr, settings, ex) {
+        alert("failed, " + ex);
+      });
+
+  });
+       </script>
    </body>
 </html>

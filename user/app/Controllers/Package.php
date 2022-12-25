@@ -61,19 +61,48 @@ class Package extends BaseController
                 'user' => $user->where('email', $email)->first(),
                 'item' => $model->where('id', $item)->first()
             ];
-            $add = [
+            $select = $cart->where(array('package_id' => $item, 'client' => $data['user']['id'], 'order_stat' => 1))->first();
+            if($select) {
+                $set = [
+                    'quantity' => $select['quantity'] + 1
+                  ];
+                  $cart->set($set)->where('id', $select['id'])->update();
+            } 
+            else {
+                $add = [
                 'package_id' => $item,
                 'img'    => $data['item']['img'],
                 'item'    => $data['item']['item'],
-                'status'    => $data['item']['status'],
+                'product_stat'    => $data['item']['status'],
                 'price'    => $data['item']['price'],
-                'client'    => $data['user']['id'],
-      
+                'client'    => $data['user']['id']
               ];
-              // print_r($data);
-              $cart->save($add);
-            return json_encode($data['item']);
+               
 
+              $cart->save($add);
+           
+             
+            }
+            return json_encode( $data);
+        }
+    }
+
+    public function addqty() {
+        $model = new Package_model();
+        $user = new Auth_model();
+        $cart = new Cart_model();
+        $session = session();
+        if($email = session()->get('email')){
+            $cartid =  $this->request->getPost('id');
+            $qty =  $this->request->getPost('qty');
+            
+                $set = [
+                    'quantity' => $qty
+                  ];
+                  $cart->set($set)->where('id', $cartid)->update();
+           
+
+            return json_encode( $qty);
         }
     }
 }
