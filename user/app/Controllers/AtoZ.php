@@ -12,12 +12,12 @@ class AtoZ extends BaseController
         return view('about');
     }
       
+    
     public function shop() {
         return view('shop');
     }   
-    public function contact() {
-        return view('contact');
-    } 
+   
+
     public function table() {
         $model = new Auth_model();
         $users = $model->findAll();

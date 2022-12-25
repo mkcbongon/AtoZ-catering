@@ -15,11 +15,14 @@ class Package extends BaseController
         ];
         return view('packages', $data);
     } 
+
+
     public function search($id = null) {
         $model = new Package_model();
         $data = $model->where('id', $id)->first();
         var_dump($data);
     }
+
 
     public function user_package() {
         $model = new Package_model();
@@ -42,13 +45,13 @@ class Package extends BaseController
     // }
 
     public function cart() {
-        
         $cart = new Cart_model();
         $data = [
             'cart' => $cart->findAll()
         ];
         return view('cart', $data);
     }
+
 
     public function addtocart() {
         $model = new Package_model();
@@ -61,7 +64,7 @@ class Package extends BaseController
                 'user' => $user->where('email', $email)->first(),
                 'item' => $model->where('id', $item)->first()
             ];
-            $select = $cart->where(array('package_id' => $item, 'client' => $data['user']['id'], 'order_stat' => 1))->first();
+            $select = $cart->where(array('package_id' => $item, 'client' => $data['user']['id'], 'order_stat' => 'PENDING'))->first();
             if($select) {
                 $set = [
                     'quantity' => $select['quantity'] + 1
@@ -77,15 +80,12 @@ class Package extends BaseController
                 'price'    => $data['item']['price'],
                 'client'    => $data['user']['id']
               ];
-               
-
               $cart->save($add);
-           
-             
             }
             return json_encode( $data);
         }
     }
+
 
     public function addqty() {
         $model = new Package_model();
@@ -95,14 +95,16 @@ class Package extends BaseController
         if($email = session()->get('email')){
             $cartid =  $this->request->getPost('id');
             $qty =  $this->request->getPost('qty');
-            
                 $set = [
                     'quantity' => $qty
                   ];
                   $cart->set($set)->where('id', $cartid)->update();
-           
-
             return json_encode( $qty);
         }
     }
+
+
+    public function request() {
+        return view('request');
+    } 
 }

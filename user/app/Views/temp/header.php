@@ -11,6 +11,10 @@
                      <li class="nav-item">
                         <a class="nav-link" href="index">Home</a>
                      </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="about">About</a>
+                     </li>
+                     <li class="nav-item">
                      <?php $session = session(); ?>
                      <?php if($session->logged=="logged"): ?>
                      <li class="nav-item">
@@ -21,14 +25,7 @@
                         <a class="nav-link" href="packages">Packages</a>
                      </li>
                      <?php endif ?>
-                     <li class="nav-item">
-                        <a class="nav-link" href="about">About</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="shop">Shop</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="contact">Contact</a>
+                        <a class="nav-link" href="request">Request Cater</a>
                      </li>
                   </ul>
                   <form class="form-inline my-2 my-lg-0">

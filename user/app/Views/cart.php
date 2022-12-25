@@ -46,7 +46,7 @@
                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
              </svg>
             </button>
-            <button class="app-content-headerButton">Send Cater Request</button>
+            <button class="app-content-headerButton send_req">Send Cater Request</button>
          </div>
          <div class="app-content-actions">
            <input class="search-bar" placeholder="Search..." type="text">
@@ -86,7 +86,7 @@
            
            
             <?php foreach ($cart as $cart): ?>
-            <?php if($cart['order_stat']==2)?>
+            <?php if($cart['order_stat']=='PENDING'):?>
            <div class="products-row">
                <div class="product-cell image">
                  <img src="<?=$cart['img']?>" alt=""> <!-- Product Image -->
@@ -96,7 +96,7 @@
                <span class="cell-label">Product Status:</span>
                 <?php if($cart['product_stat']==1)
                 echo '<span class="status active">Available</span>';
-                else
+                else if($cart['product_stat']==0)
                 echo '<span class="status disabled">Out of Stock</span>';
                ?></span>
                
@@ -120,7 +120,7 @@
           </div>  
             <div class="product-cell price"><span class="cell-label" >Total:</span><span id="total<?=$cart['id']?>">₱<?=$cart['price']*$cart['quantity']?></span></div>
         </div>
-           
+           <?php endif; ?>
            <?php endforeach; ?>
            </div>
            
@@ -149,54 +149,54 @@
       <script>
         var proQty = $(".pro-qty");
         proQty.prepend('<span class="dec qtybtn btn">-</span>');
-  proQty.append('<span class="inc qtybtn btn">+</span>');
-  proQty.on("click", ".qtybtn", function () {
-    var $button = $(this);
-    var oldValue = $button.parent().find("input").val();
-    var id = $button.parent().find("input").attr("id");
-    var price = document.getElementById('price'+id).innerHTML;
-    var newVal;
-    if ($button.hasClass("inc")) {
-        newVal = parseInt(oldValue) + 1;
-    } else {
-      // Don't allow decrementing below zero
-      if (oldValue > 1) {
-          newVal = parseInt(oldValue) - 1;
-      }
-      else 
-        newVal = 1;
-    }
-    console.log(newVal);
-    $.post(
-      '<?=base_url()?>/addqty',
-      // DATA TO PASS
-      {
-        qty: newVal,
-        id: id
-      },
-      function (data, status, xhr) {
-        console.log(price);
-        // var pid = "total" + id.trim();
-        // var total = data["single"]["prod_price"] * data["single"]["quantity"];
-        // document.getElementById(pid).innerHTML = "₱ " + total.toFixed(2);
-        // document.getElementById("grand").innerHTML = "₱  " + (data["total"][0]["total"]).toFixed(2);
-        // if (oldValue.substring(oldValue.indexOf(' ') + 1) == 'kg')
-          $button.parent().find("input").val(newVal);
-          document.getElementById('total'+id).innerHTML = "₱ " + price * newVal;
-        // else
-        //   $button.parent().find("input").val(newVal);
-      }
-    )
+        proQty.append('<span class="inc qtybtn btn">+</span>');
+        proQty.on("click", ".qtybtn", function () {
+        var $button = $(this);
+        var oldValue = $button.parent().find("input").val();
+        var id = $button.parent().find("input").attr("id");
+        var price = document.getElementById('price'+id).innerHTML;
+        var newVal;
+        if ($button.hasClass("inc")) {
+            newVal = parseInt(oldValue) + 1;
+        } else {
+          // Don't allow decrementing below zero
+          if (oldValue > 1) {
+              newVal = parseInt(oldValue) - 1;
+          }
+          else 
+            newVal = 1;
+        }
+        console.log(newVal);
+        $.post(
+          '<?=base_url()?>/addqty',
+          // DATA TO PASS
+          {
+            qty: newVal,
+            id: id
+          },
+          function (data, status, xhr) {
+            console.log(price);
+            // var pid = "total" + id.trim();
+            // var total = data["single"]["prod_price"] * data["single"]["quantity"];
+            // document.getElementById(pid).innerHTML = "₱ " + total.toFixed(2);
+            // document.getElementById("grand").innerHTML = "₱  " + (data["total"][0]["total"]).toFixed(2);
+            // if (oldValue.substring(oldValue.indexOf(' ') + 1) == 'kg')
+              $button.parent().find("input").val(newVal);
+              document.getElementById('total'+id).innerHTML = "₱ " + price * newVal;
+            // else
+            //   $button.parent().find("input").val(newVal);
+          }
+        )
 
-      // TO DO ON SUCCESS
-      .done(function () { })
+          // TO DO ON SUCCESS
+          .done(function () { })
 
-      // TO DO ON FAIL
-      .fail(function (jqxhr, settings, ex) {
-        alert("failed, " + ex);
+          // TO DO ON FAIL
+          .fail(function (jqxhr, settings, ex) {
+            alert("failed, " + ex);
+          });
+
       });
-
-  });
        </script>
    </body>
 </html>
