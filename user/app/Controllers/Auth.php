@@ -5,6 +5,7 @@ use App\Models\Auth_model;
 
 class Auth extends BaseController
 {
+    
     public function register() {
         //get
         if($this->request->getMethod()=="get") {
@@ -47,6 +48,7 @@ class Auth extends BaseController
                 return redirect()->back()->withInput();
             }
         }
+        
 
         //post
     }
