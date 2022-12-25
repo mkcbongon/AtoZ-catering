@@ -2,13 +2,24 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Products</title>
+  <title>CodePen - Products Dashboard UI</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
-<!-- bootstrap css -->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>About</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <!-- style css -->
       <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="prod_style.css">
       <!-- Responsive-->
       <link rel="stylesheet" href="css/responsive.css">
       <!-- fevicon -->
@@ -21,6 +32,7 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
 </head>
 <body>
 <?= $this->include('temp/header') ?>
@@ -35,10 +47,8 @@
           <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
         </svg>
       </button>
-      <button class="app-content-headerButton">Add Product</button>
     </div>
     <div class="app-content-actions">
-      <input class="search-bar" placeholder="Search..." type="text">
       <div class="app-content-actions-wrapper">
         <div class="filter-button-wrapper">
           <button class="action-button filter jsFilter"><span>Filter</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-filter"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></button>
@@ -75,7 +85,7 @@
       </div>
     </div>
     <div class="products-area-wrapper tableView">
-      <div class="products-header">
+    <div class="products-header">
         <div class="product-cell image">
           Items
           <button class="sort-button">
@@ -114,7 +124,12 @@
           ?>
         </div>
         <div class="product-cell price"><span class="cell-label">Price:</span>₱<?=$item['price']?></div>
-        <div class="product-cell stock"><a href="login" class="btn btn-success"><span class=""></span>Add to Cart</a></div>
+        <?php $session = session(); ?>
+          <?php if($session->logged=="logged"): ?>
+            <div class="product-cell stock"><a href="" class="btn btn-success"><span class=""></span>Add to Cart</a></div>
+          <?php else: ?>
+          <div class="product-cell stock"><a href="login" class="btn btn-warning"><span class=""></span>Sign in to Order</a></div>
+          <?php endif ?>
       </div>
       <?php endforeach; ?>
     </div>
@@ -122,7 +137,21 @@
 </div>
 <!-- partial -->
   <script  src="./script.js"></script>
-  <?= $this->include('temp/js') ?>
-
+ <!-- partial -->
+<script  src="/prod_script.js"></script>
+     
+     <!-- services section end -->
+     <!-- Javascript files-->
+     <script src="js/jquery.min.js"></script>
+     <script src="js/popper.min.js"></script>
+     <script src="js/bootstrap.bundle.min.js"></script>
+     <script src="js/jquery-3.0.0.min.js"></script>
+     <script src="js/plugin.js"></script>
+     <!-- sidebar -->
+     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+     <script src="js/custom.js"></script>
+     <!-- javascript --> 
+     <script src="js/owl.carousel.js"></script>
+     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script> 
 </body>
 </html>

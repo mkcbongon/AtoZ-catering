@@ -90,3 +90,75 @@ in APPPATH\Controllers\Auth.php on line 54.
  4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-24 22:31:56 --> mysqli_sql_exception: Table 'lumiere.cart' doesn't exist in C:\wamp64\www\AtoZ\user\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\AtoZ\user\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\AtoZ\user\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\AtoZ\user\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\AtoZ\user\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\AtoZ\user\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\AtoZ\user\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\AtoZ\user\app\Controllers\Package.php(46): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\AtoZ\user\system\CodeIgniter.php(925): App\Controllers\Package->cart()
+#8 C:\wamp64\www\AtoZ\user\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Package))
+#9 C:\wamp64\www\AtoZ\user\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\AtoZ\user\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\AtoZ\user\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\A...')
+#12 {main}
+CRITICAL - 2022-12-24 22:31:56 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 241.
+ 1 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Package.php(46): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Package->cart()
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Package))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-24 22:32:39 --> mysqli_sql_exception: Table 'lumiere.cart' doesn't exist in C:\wamp64\www\AtoZ\user\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\AtoZ\user\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\AtoZ\user\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\AtoZ\user\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\AtoZ\user\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\AtoZ\user\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\AtoZ\user\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\AtoZ\user\app\Controllers\Package.php(46): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\AtoZ\user\system\CodeIgniter.php(925): App\Controllers\Package->cart()
+#8 C:\wamp64\www\AtoZ\user\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Package))
+#9 C:\wamp64\www\AtoZ\user\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\AtoZ\user\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\AtoZ\user\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\A...')
+#12 {main}
+CRITICAL - 2022-12-24 22:32:39 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 241.
+ 1 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Package.php(46): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Package->cart()
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Package))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2022-12-24 22:37:15 --> mysqli_sql_exception: Table 'lumiere.cart' doesn't exist in C:\wamp64\www\AtoZ\user\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\wamp64\www\AtoZ\user\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\AtoZ\user\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\AtoZ\user\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\AtoZ\user\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\AtoZ\user\system\Model.php(240): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\AtoZ\user\system\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\wamp64\www\AtoZ\user\app\Controllers\Package.php(46): CodeIgniter\BaseModel->findAll()
+#7 C:\wamp64\www\AtoZ\user\system\CodeIgniter.php(925): App\Controllers\Package->cart()
+#8 C:\wamp64\www\AtoZ\user\system\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Package))
+#9 C:\wamp64\www\AtoZ\user\system\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\AtoZ\user\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\AtoZ\user\system\Commands\Server\rewrite.php(47): require_once('C:\\wamp64\\www\\A...')
+#12 {main}
+CRITICAL - 2022-12-24 22:37:15 --> Call to a member function getResult() on bool
+in SYSTEMPATH\Model.php on line 241.
+ 1 SYSTEMPATH\BaseModel.php(586): CodeIgniter\Model->doFindAll(0, 0)
+ 2 APPPATH\Controllers\Package.php(46): CodeIgniter\BaseModel->findAll()
+ 3 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Package->cart()
+ 4 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Package))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
