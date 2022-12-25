@@ -32,6 +32,7 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
 </head>
 <body>
@@ -126,7 +127,7 @@
         <div class="product-cell price"><span class="cell-label">Price:</span>₱<?=$item['price']?></div>
         <?php $session = session(); ?>
           <?php if($session->logged=="logged"): ?>
-            <div class="product-cell stock"><a href="" class="btn btn-success"><span class=""></span>Add to Cart</a></div>
+            <div class="product-cell stock"><button class="btn btn-success addtocart" id="<?=$item['id']?>"><span class=""></span>Add to Cart</button></div>
           <?php else: ?>
           <div class="product-cell stock"><a href="login" class="btn btn-warning"><span class=""></span>Sign in to Order</a></div>
           <?php endif ?>
@@ -142,7 +143,6 @@
      
      <!-- services section end -->
      <!-- Javascript files-->
-     <script src="js/jquery.min.js"></script>
      <script src="js/popper.min.js"></script>
      <script src="js/bootstrap.bundle.min.js"></script>
      <script src="js/jquery-3.0.0.min.js"></script>
@@ -153,5 +153,52 @@
      <!-- javascript --> 
      <script src="js/owl.carousel.js"></script>
      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script> 
+     <script src="js/jquery.min.js"></script>
+     
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script>    
+    $(".addtocart").on("click", function () {
+    var id = $(this).attr("id"); 
+    console.log(id);
+    $.post(
+      '<?=base_url()?>/addtocart',
+        // DATA TO PASS
+        {
+          id: id
+        },
+        function (data, status, xhr) {
+          console.log(data);
+          // $("#cartadd").modal();
+          Toastify({
+            text: "\u2713 Product added to cart!  ",
+            duration: 3000,
+            // destination: "https://github.com/apvarun/toastify-js",
+            // newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              height: 23,
+              background: "linear-gradient(to right, #00c851, #00c851)",
+            },
+            onClick: function(){} // Callback after click
+          }).showToast();
+          // document.getElementById("cartcount1").innerHTML = data["total_row"];
+          // document.getElementById("cartcount2").innerHTML = data["total_row"];
+        }
+      )
+        .done(function () {
+
+        })
+
+        // TO DO ON FAIL
+        .fail(function (jqxhr, settings, ex) {
+          alert("failed, " + ex);
+        });
+      });
+      </script>
 </body>
 </html>

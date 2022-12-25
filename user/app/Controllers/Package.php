@@ -3,6 +3,8 @@
 namespace App\Controllers;
 use App\Models\Package_model;
 use App\Models\Cart_model;
+use App\Models\Auth_model;
+
 
 class Package extends BaseController
 {
@@ -46,5 +48,32 @@ class Package extends BaseController
             'cart' => $cart->findAll()
         ];
         return view('cart', $data);
+    }
+
+    public function addtocart() {
+        $model = new Package_model();
+        $user = new Auth_model();
+        $cart = new Cart_model();
+        $session = session();
+        if($email = session()->get('email')){
+            $item =  $this->request->getPost('id');
+            $data = [
+                'user' => $user->where('email', $email)->first(),
+                'item' => $model->where('id', $item)->first()
+            ];
+            $add = [
+                'package_id' => $item,
+                'img'    => $data['item']['img'],
+                'item'    => $data['item']['item'],
+                'status'    => $data['item']['status'],
+                'price'    => $data['item']['price'],
+                'client'    => $data['user']['id'],
+      
+              ];
+              // print_r($data);
+              $cart->save($add);
+            return json_encode($data['item']);
+
+        }
     }
 }

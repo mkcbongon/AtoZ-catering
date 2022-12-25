@@ -31,6 +31,7 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
    </head>
    <body>
    <?= $this->include('temp/header') ?>
@@ -49,10 +50,10 @@
          <div class="app-content-actions">
            <input class="search-bar" placeholder="Search..." type="text">
            <div class="app-content-actions-wrapper">
-             <button class="action-button list active" title="List View">
+             <button class="action-button list active" id='list' title="List View">
                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
              </button>
-             <button class="action-button grid" title="Grid View">
+             <button class="action-button grid" id='grid' title="Grid View">
                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
              </button>
            </div>
@@ -93,7 +94,7 @@
                ?></span>
              </div>
              <div class="product-cell price"><span class="cell-label">Price:</span>₱<?=$cart['price']?></div>
-             <div class="product-cell stock"><span class="cell-label"></span><input id=demoInput type=number min=100 max=110>
+             <!-- <div class="product-cell stock"><span class="cell-label"></span><input id=demoInput type=number min=100 max=110>
 <button onclick="increment()">+</button>
 <button onclick="decrement()">-</button>
 <script>
@@ -103,18 +104,18 @@
    function decrement() {
       document.getElementById('demoInput').stepDown();
    }
-</script>
+</script> -->
 </div>
-           </div>
+           
            
            <?php endforeach; ?>
-           
+           </div>
            
          </div>
        </div>
      </div>
      <!-- partial -->
-       <script  src="/prod_script.js"></script>
+       
      
       <!-- services section end -->
       <!-- Javascript files-->
@@ -125,9 +126,12 @@
       <script src="js/plugin.js"></script>
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="js/custom.js"></script>
       <!-- javascript --> 
       <script src="js/owl.carousel.js"></script>
-      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>    
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>   
+       
+      <script  src="<?=base_url()?>/script.js"></script>
    </body>
 </html>

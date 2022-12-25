@@ -49,8 +49,6 @@
                      <ul>
                         <li><a href="register">SIGN UP</a></li>
                      </ul>
-
-
                   <?php endif ?>
                   </div>
                </div>
