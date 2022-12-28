@@ -1,0 +1,180 @@
+CRITICAL - 2022-12-06 07:19:08 --> Undefined variable $bookings
+in APPPATH\Views\page\AllBookings.php on line 88.
+ 1 APPPATH\Views\page\AllBookings.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bookings', 'APPPATH\\Views\\page\\AllBookings.php', 88)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\page\\AllBookings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('page/AllBookings', [], true)
+ 5 APPPATH\Controllers\PackageController.php(46): view('page/AllBookings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PackageController->packageDisplay()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PackageController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-06 07:20:41 --> Undefined variable $bookings
+in APPPATH\Views\page\AllBookings.php on line 88.
+ 1 APPPATH\Views\page\AllBookings.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bookings', 'APPPATH\\Views\\page\\AllBookings.php', 88)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\page\\AllBookings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('page/AllBookings', [], true)
+ 5 APPPATH\Controllers\PackageController.php(46): view('page/AllBookings', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PackageController->packageDisplay()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PackageController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-06 07:22:26 --> Undefined variable $package
+in APPPATH\Views\page\addPackage.php on line 82.
+ 1 APPPATH\Views\page\addPackage.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $package', 'APPPATH\\Views\\page\\addPackage.php', 82)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\page\\addPackage.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('page/addPackage', [], true)
+ 5 APPPATH\Controllers\TransactionController.php(68): view('page/addPackage')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TransactionController->addPackage()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-06 07:23:44 --> Undefined variable $package
+in APPPATH\Views\page\addPackage.php on line 82.
+ 1 APPPATH\Views\page\addPackage.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $package', 'APPPATH\\Views\\page\\addPackage.php', 82)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\page\\addPackage.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('page/addPackage', [], true)
+ 5 APPPATH\Controllers\TransactionController.php(68): view('page/addPackage')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TransactionController->addPackage()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-06 07:23:49 --> Undefined array key "goodofor"
+in APPPATH\Views\page\addPackage.php on line 87.
+ 1 APPPATH\Views\page\addPackage.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "goodofor"', 'APPPATH\\Views\\page\\addPackage.php', 87)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\page\\addPackage.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('page/addPackage', [], true)
+ 5 APPPATH\Controllers\PackageController.php(46): view('page/addPackage', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PackageController->packageDisplay()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PackageController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-06 07:26:36 --> Undefined variable $package
+in APPPATH\Views\page\addPackage.php on line 82.
+ 1 APPPATH\Views\page\addPackage.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $package', 'APPPATH\\Views\\page\\addPackage.php', 82)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\page\\addPackage.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('page/addPackage', [], true)
+ 5 APPPATH\Controllers\TransactionController.php(68): view('page/addPackage')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TransactionController->addPackage()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-06 07:37:25 --> Call to undefined function form_open_multipart()
+in APPPATH\Views\page\addPackage.php on line 133.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('page/addPackage', [], true)
+ 4 APPPATH\Controllers\PackageController.php(46): view('page/addPackage', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PackageController->packageDisplay()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PackageController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-06 08:02:46 --> Undefined variable $img
+in APPPATH\Controllers\PackageController.php on line 17.
+ 1 APPPATH\Controllers\PackageController.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $img', 'APPPATH\\Controllers\\PackageController.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PackageController->add_package()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PackageController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-06 08:03:25 --> Call to a member function move() on string
+in APPPATH\Controllers\PackageController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PackageController->add_package()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PackageController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-06 08:06:14 --> Call to a member function move() on null
+in APPPATH\Controllers\PackageController.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PackageController->add_package()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PackageController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-06 09:19:04 --> Undefined variable $package
+in APPPATH\Views\page\addBookings.php on line 103.
+ 1 APPPATH\Views\page\addBookings.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $package', 'APPPATH\\Views\\page\\addBookings.php', 103)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\page\\addBookings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('page/addBookings', [], true)
+ 5 APPPATH\Controllers\TransactionController.php(15): view('page/addBookings')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TransactionController->addBookings()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-06 09:20:41 --> Undefined variable $package
+in APPPATH\Views\page\addBookings.php on line 103.
+ 1 APPPATH\Views\page\addBookings.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $package', 'APPPATH\\Views\\page\\addBookings.php', 103)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\page\\addBookings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('page/addBookings', [], true)
+ 5 APPPATH\Controllers\TransactionController.php(15): view('page/addBookings')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TransactionController->addBookings()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-06 09:22:32 --> Class "App\Controllers\PackageModel" not found
+in APPPATH\Controllers\TransactionController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TransactionController->addBookings()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TransactionController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-06 22:26:21 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'financialdb', 3306, '', 0)
+#1 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\FinancialManagementSystem\app\Controllers\PackageController.php(45): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\PackageController->packageDisplay()
+#8 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PackageController))
+#9 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\FinancialManagementSystem\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\FinancialManagementSystem\app\Controllers\PackageController.php(45): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\PackageController->packageDisplay()
+#7 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PackageController))
+#8 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\FinancialManagementSystem\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\FinancialManagementSystem\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-06 22:26:21 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `package_tb`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\PackageController.php(45): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PackageController->packageDisplay()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PackageController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
