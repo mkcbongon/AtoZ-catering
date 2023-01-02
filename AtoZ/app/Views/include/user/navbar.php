@@ -22,9 +22,7 @@
                         </div>
                         <a href="<?=base_url('contact');?>" class="nav-item nav-link">Contact</a>
                     </div>
-
-                    <a class="btn btn-success" href="#" role="button" data-toggle="modal" data-target="#addmodal">Sign in</a>
-                    
+                    <a href="" class="btn btn-primary py-2 px-4">SIGN IN</a>
 
                 </div>
 
