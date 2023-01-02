@@ -42,6 +42,11 @@ $routes->set404Override();
  */
 // User Router
 $routes->get('/', 'UserController::index');
+$routes->get('about', 'UserController::about');
+$routes->get('service', 'UserController::service');
+$routes->get('menu', 'UserController::menu');
+$routes->get('pages', 'UserController::pages');
+$routes->get('contact', 'UserController::contact');
 
 $routes->get('/', 'SignupController::index');
 $routes->get('/register', 'SignupController::index');
