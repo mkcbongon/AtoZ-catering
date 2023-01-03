@@ -42,7 +42,7 @@
               <div class="inner">
                 <h3>150</h3>
 
-                <p>New Orders</p>
+                <p>Monthly Earnings</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -57,7 +57,7 @@
               <div class="inner">
                 <h3>53<sup style="font-size: 20px">%</sup></h3>
 
-                <p>Bounce Rate</p>
+                <p>Annualy Earnings</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -583,7 +583,7 @@
                     <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown" data-offset="-52">
                       <i class="fas fa-bars"></i>
                     </button>
-                    <div class="dropdown-menu" role="menu">
+                    <div class="dropdown-menu" role="menu"> 
                       <a href="#" class="dropdown-item">Add new event</a>
                       <a href="#" class="dropdown-item">Clear events</a>
                       <div class="dropdown-divider"></div>
