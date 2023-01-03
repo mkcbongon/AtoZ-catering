@@ -40,7 +40,11 @@ $routes->set404Override();
  * Route Definitions
  * --------------------------------------------------------------------
  */
-// User Router
+// Guest Router
+$routes->get('/', 'GuestController::index');
+
+
+ // User Router
 $routes->get('/', 'UserController::index');
 $routes->get('about', 'UserController::about');
 $routes->get('service', 'UserController::service');

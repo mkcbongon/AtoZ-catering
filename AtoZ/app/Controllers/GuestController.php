@@ -3,11 +3,11 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\UserModel;
   
-class UserController extends Controller
+class GuestController extends Controller
 {
     public function index()
     {
-        echo view('user/index');
+        echo view('guest/index');
     } 
     public function about()
     {
@@ -29,8 +29,6 @@ class UserController extends Controller
     {
         echo view('user/contact');
     } 
-
-
 
     
 }
