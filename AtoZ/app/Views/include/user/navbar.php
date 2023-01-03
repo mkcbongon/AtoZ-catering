@@ -1,3 +1,4 @@
+<!-- navigation bar start here -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
                     <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>A to Z Catering Services</h1>
@@ -16,12 +17,14 @@
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
                                 <a href="booking" class="dropdown-item">Booking</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="team" class="dropdown-item">Our Team</a>
+                                <a href="testimonial" class="dropdown-item">Testimonial</a>
                             </div>
                         </div>
                         <a href="<?=base_url('contact');?>" class="nav-item nav-link">Contact</a>
                     </div>
+
+                    <!-- sign in modal -->
                     <a href="" class="btn btn-primary py-2 px-4">SIGN IN</a>
 
                 </div>
