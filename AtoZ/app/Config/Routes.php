@@ -54,7 +54,7 @@ $routes->match(['get', 'post'], 'SignupController/store', 'SignupController::sto
 $routes->match(['get', 'post'], 'SigninController/loginAuth', 'SigninController::loginAuth');
 $routes->get('/login', 'SigninController::index');
 $routes->get('/logout', 'SigninController::logout');
-$routes->get('/profile', 'ProfileController::index',['filter' => 'authGuard']);
+$routes->get('/dashboard', 'ProfileController::index',['filter' => 'authGuard']);
 
 $routes->match(['get', 'post'], '/AllBookings', 'TransactionController::AllBookings',['filter' => 'authGuard']);
 $routes->get('/addBookings', 'TransactionController::addBookings',['filter' => 'authGuard']);
