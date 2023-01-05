@@ -42,6 +42,7 @@ $routes->set404Override();
  */
 // Guest Router
 $routes->get('/', 'GuestController::index');
+$routes->get('signin', 'GuestController::signin');
 
 
  // User Router

@@ -29,6 +29,10 @@ class GuestController extends Controller
     {
         echo view('user/contact');
     } 
+    public function signin()
+    {
+        echo view('auth/signin');
+    } 
 
     
 }
