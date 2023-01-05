@@ -53,6 +53,8 @@ $routes->post('/login', 'Auth::login');
 $routes->get('/logout', 'Auth::logout');
 $routes->get('/table', 'AtoZ::table', ['filter'=>'isAdmin']);
 
+$routes->get('/delete/(:num)', 'Package::delete/$1');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

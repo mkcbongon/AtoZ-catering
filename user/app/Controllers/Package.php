@@ -17,10 +17,17 @@ class Package extends BaseController
     } 
 
 
-    public function search($id = null) {
-        $model = new Package_model();
-        $data = $model->where('id', $id)->first();
-        var_dump($data);
+    // public function search($id = null) {
+    //     $model = new Package_model();
+    //     $data = $model->where('id', $id)->first();
+    //     var_dump($data);
+    // }
+
+    public function delete($id) {
+        $cart = new Cart_model();
+        // $data = $model->where('id', $id)->first();
+        $cart->where('id', $id)->delete(); 
+        return redirect()->back();
     }
 
 
