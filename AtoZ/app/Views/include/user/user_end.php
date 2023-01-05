@@ -1,6 +1,6 @@
  <!-- JavaScript Libraries -->
- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="<?=base_url('vendor/jquery/jquery.min.js');?>"></script>
+    <script src="<?=base_url('vendor/bootstrap/js/bootstrap.bundle.min.js');?>"></script>
     <script src="<?=base_url('users/lib/wow/wow.min.js');?>"></script>
     <script src="<?=base_url('users/lib/easing/easing.min.js');?>"></script>
     <script src="<?=base_url('users/lib/waypoints/waypoints.min.js');?>"></script>
@@ -11,4 +11,6 @@
     <script src="<?=base_url('users/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js');?>"></script>
 
     <!-- Template Javascript -->
-    <script src="<?=base_url('users/js/main.js');?>"></script>
+    <script src="<?=base_url('vendor/js/main.js');?>"></script>
+
+    <script src="<?=base_url('vendor/jquery/jquery.min.js');?>"></script>

@@ -11,23 +11,23 @@ class GuestController extends Controller
     } 
     public function about()
     {
-        echo view('user/about');
+        echo view('guest/about');
     } 
     public function service()
     {
-        echo view('user/service');
+        echo view('guest/service');
     } 
     public function menu()
     {
-        echo view('user/menu');
+        echo view('guest/menu');
     } 
     public function pages()
     {
-        echo view('user/pages');
+        echo view('guest/pages');
     } 
     public function contact()
     {
-        echo view('user/contact');
+        echo view('guest/contact');
     } 
     public function signin()
     {

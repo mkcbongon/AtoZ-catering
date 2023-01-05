@@ -42,6 +42,11 @@ $routes->set404Override();
  */
 // Guest Router
 $routes->get('/', 'GuestController::index');
+$routes->get('about', 'GuestController::about');
+$routes->get('service', 'GuestController::service');
+$routes->get('menu', 'GuestController::menu');
+$routes->get('pages', 'GuestController::pages');
+$routes->get('contact', 'GuestController::contact');
 $routes->get('signin', 'GuestController::signin');
 
 
