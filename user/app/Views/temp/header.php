@@ -15,16 +15,9 @@
                         <a class="nav-link" href="about">About</a>
                      </li>
                      <li class="nav-item">
-                     <?php $session = session(); ?>
-                     <?php if($session->logged=="logged"): ?>
-                     <li class="nav-item">
-                        <a class="nav-link" href="user_package">Packages</a>
-                     </li>
-                     <?php else: ?>
                      <li class="nav-item">
                         <a class="nav-link" href="packages">Packages</a>
                      </li>
-                     <?php endif ?>
                         <a class="nav-link" href="request">Request Cater</a>
                      </li>
                   </ul>

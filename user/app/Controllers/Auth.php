@@ -77,7 +77,7 @@ class Auth extends BaseController
                     $session->set($sess_data);
                     if ($record['usertype']=='CLIENT') {
                         //go to CLIENT page
-                        $url="user_package";
+                        $url="packages";
                     }
                     else if ($record['usertype']=='ADMIN') {
                         //go to ADMIN page
