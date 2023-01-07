@@ -43,7 +43,7 @@ $routes->set404Override();
 // Guest Router
 $routes->get('/', 'GuestController::index');
 $routes->get('about', 'GuestController::about');
-$routes->get('service', 'GuestController::service');
+$routes->get('guest_service', 'GuestController::service');
 $routes->get('menu', 'GuestController::menu');
 $routes->get('pages', 'GuestController::pages');
 $routes->get('contact', 'GuestController::contact');
@@ -64,7 +64,7 @@ $routes->match(['get', 'post'], 'SignupController/store', 'SignupController::sto
 $routes->match(['get', 'post'], 'SigninController/loginAuth', 'SigninController::loginAuth');
 $routes->get('/login', 'SigninController::index');
 $routes->get('/logout', 'SigninController::logout');
-$routes->get('/dashboard', 'ProfileController::index',['filter' => 'authGuard']);
+$routes->get('/dashboard', 'ProfileController::index');
 
 $routes->match(['get', 'post'], '/AllBookings', 'TransactionController::AllBookings',['filter' => 'authGuard']);
 $routes->get('/addBookings', 'TransactionController::addBookings',['filter' => 'authGuard']);

@@ -15,7 +15,7 @@ class GuestController extends Controller
     } 
     public function service()
     {
-        echo view('guest/service');
+        echo view('guest/guest_service');
     } 
     public function menu()
     {
