@@ -1,0 +1,10 @@
+CRITICAL - 2023-01-10 00:01:45 --> Invalid file: packages.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('packages.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('packages', [], true)
+ 3 APPPATH\Controllers\Package.php(16): view('packages', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\Package->packages()
+ 5 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Package))
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

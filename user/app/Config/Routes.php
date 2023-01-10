@@ -37,8 +37,13 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/index', 'AtoZ::index');
 // $routes->get('/atoz', 'AtoZ::atoz');
-$routes->get('/packages', 'Package::packages');
-$routes->get('/user_package', 'Package::user_package', ['filter'=>'isLogin']);
+$session = session();
+    if($session->logged=="logged"){
+        $routes->get('/menu', 'Package::packages', ['filter'=>'isLogin']);
+    }
+    else {
+        $routes->get('/menu', 'Package::packages');
+    }
 $routes->get('/cart', 'Package::cart', ['filter'=>'isLogin']);
 $routes->match(['get', 'post'], "/addtocart", "Package::addtocart", ['filter' =>'isLogin']);
 $routes->match(['get', 'post'], "/addqty", "Package::addqty", ['filter' =>'isLogin']);
