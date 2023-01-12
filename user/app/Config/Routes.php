@@ -39,10 +39,10 @@ $routes->get('/index', 'AtoZ::index');
 // $routes->get('/atoz', 'AtoZ::atoz');
 $session = session();
     if($session->logged=="logged"){
-        $routes->get('/menu', 'Package::packages', ['filter'=>'isLogin']);
+        $routes->get('/packages', 'Package::packages', ['filter'=>'isLogin']);
     }
     else {
-        $routes->get('/menu', 'Package::packages');
+        $routes->get('/packages', 'Package::packages');
     }
 $routes->get('/cart', 'Package::cart', ['filter'=>'isLogin']);
 $routes->match(['get', 'post'], "/addtocart", "Package::addtocart", ['filter' =>'isLogin']);
