@@ -332,21 +332,18 @@ class App extends BaseConfig
      *
      * If your server is behind a reverse proxy, you must whitelist the proxy
      * IP addresses from which CodeIgniter should trust headers such as
-     * X-Forwarded-For or Client-IP in order to properly identify
+     * HTTP_X_FORWARDED_FOR and HTTP_CLIENT_IP in order to properly identify
      * the visitor's IP address.
      *
-     * You need to set a proxy IP address or IP address with subnets and
-     * the HTTP header for the client IP address.
+     * You can use both an array or a comma-separated list of proxy addresses,
+     * as well as specifying whole subnets. Here are a few examples:
      *
-     * Here are some examples:
-     *     [
-     *         '10.0.1.200'     => 'X-Forwarded-For',
-     *         '192.168.5.0/24' => 'X-Real-IP',
-     *     ]
+     * Comma-separated:	'10.0.1.200,192.168.5.0/24'
+     * Array: ['10.0.1.200', '192.168.5.0/24']
      *
-     * @var array<string, string>
+     * @var string|string[]
      */
-    public $proxyIPs = [];
+    public $proxyIPs = '';
 
     /**
      * --------------------------------------------------------------------------

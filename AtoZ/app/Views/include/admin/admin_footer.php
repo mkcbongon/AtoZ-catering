@@ -1,11 +1,11 @@
-<footer class="main-footer text-center">
+<footer class="main-footer">
     <strong>Copyright &copy; A to Z Catering Services</strong>
     All rights reserved.
     
-</footer>
+  </footer>
 
   <!-- Control Sidebar -->
-<aside class="control-sidebar control-sidebar-dark">
+  <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
-</aside>
+  </aside>
   <!-- /.control-sidebar -->

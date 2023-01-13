@@ -8,7 +8,7 @@ class SigninController extends Controller
     public function index()
     {
         helper(['form']);
-        echo view('auth/signin');
+        echo view('auth/login');
     } 
   
     public function loginAuth()
@@ -28,31 +28,21 @@ class SigninController extends Controller
                     'id' => $data['id'],
                     'name' => $data['name'],
                     'email' => $data['email'],
-                    'usertype' => $data['usertype'],
                     'isLoggedIn' => TRUE
                 ];
-
                 $session->set($ses_data);
-                if($data['usertype'] == 'admin')
-                {
-                    return redirect()->to('/dashboard');
-                }
-                else
-                {
-                    return redirect()->to('/user');
-                }
-                
-                
+                return redirect()->to('dashboard');
             
             }else{
                 $session->setFlashdata('msg', 'Password is incorrect.');
-                return redirect()->to('/signin');
+                return redirect()->to('/login');
             }
         }else{
             $session->setFlashdata('msg', 'Email does not exist.');
-            return redirect()->to('/signin');
+            return redirect()->to('/login');
         }
     }
+
     public function logout()
     {
         $session = session();

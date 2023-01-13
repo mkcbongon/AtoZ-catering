@@ -11,7 +11,7 @@ use CodeIgniter\Filters\SecureHeaders;
 
 class Filters extends BaseConfig
 {
-    /**
+    	/**
 	 * Configures aliases for Filter classes to
 	 * make reading things nicer and simpler.
 	 *

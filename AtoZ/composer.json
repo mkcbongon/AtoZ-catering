@@ -30,7 +30,7 @@
         "test": "phpunit"
     },
     "support": {
-        "forum": "https://forum.codeigniter.com/",
+        "forum": "http://forum.codeigniter.com/",
         "source": "https://github.com/codeigniter4/CodeIgniter4",
         "slack": "https://codeigniterchat.slack.com"
     }
