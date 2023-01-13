@@ -34,12 +34,13 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header bg-gradient-danger">
-                <h3 class="card-title">Package List</h3>
-                <a href="" class="btn btn-primary float-right"><i class="nav-icon fa-solid fa-plus"></i></a>
+              <div class="col">
+                 <button type="button" class="btn btn-success mb-2" data-toggle="modal" data-target="#addModal">Add New</button>
               </div>
+          <div class="col-12">
+             
+            <div class="card">
+             
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
@@ -92,6 +93,60 @@
           <!-- /.col -->
         </div>
         <!-- /.row -->
+
+         <!-- Modal Add Product-->
+            <form action="<?=base_url('new_package');?>" method="post" enctype="multipart/form-data">
+                <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add New Package</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    
+                        <div class="form-group">
+                            <label>Product Name</label>
+                            <input type="text" class="form-control" name="package_name" placeholder="Product Name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Product Details</label>
+                            <input type="text" class="form-control" name="package_details" placeholder="Product Price">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Product Amount</label>
+                            <input type="text" class="form-control" name="package_amount" placeholder="Product Price">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Product Image</label>
+                            <input type="file" id="package_image" name="package_image" class="form-control" accept="image/png, image/jpeg">
+                        </div>
+        
+                        <div class="form-group">
+                            <label>Package Availability</label>
+                            <select name="package_availability" class="form-control">
+                                <option value="">-Select-</option>
+                                <option value="">Available</option>
+                                <option value="">Not Available</option>
+                                
+                            </select>
+                        </div>
+                    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </form>
+    <!-- End Modal Add Product-->
       </div>
       <!-- /.container-fluid -->
     </section>
