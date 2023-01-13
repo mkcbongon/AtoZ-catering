@@ -1,7 +1,7 @@
 <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
-                    <h1 class="text-primary m-0"><img src="azlogo.jpg" alt=""></i>A o Z Catering Services</h1>
+                    <h1 class="text-primary m-0"><img src="/img/logofinal.png" alt=""></i>A o Z Catering Services</h1>
                     <!-- <img src="img/logo.png" alt="Logo"> -->
                     
                 </a>
@@ -24,22 +24,30 @@
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <a href="" class="btn btn-primary py-2 px-4">Admin</a>
+
+                    <div class="nav-item dropdown">
+                        <a class="nav-link" data-toggle="dropdown" href="#">
+                            <strong><?= session()->get('name') ?></strong>
+                            <img src="/img/logofinal.png" alt="" style="height: 40px;"> 
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                            <a href="#" class="dropdown-item">
+                                <i class="fa-solid fa-user"></i> Profile
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item">
+                                <i class="fa-solid fa-gear"></i> Settings
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="/logout" class="dropdown-item">
+                                <i class="fa-solid fa-right-from-bracket"></i>Log out
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </nav>
 
-            <div class="container-xxl py-5 bg-dark hero-header mb-5">
-                <div class="container my-5 py-5">
-                    <div class="row align-items-center g-5">
-                        <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="display-3 text-white animated slideInLeft">Enjoy Our<br>Delicious Meal</h1>
-                            <p class="text-white animated slideInLeft mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                            <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book Now</a>
-                        </div>
-                        <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                            <img class="img-fluid" src="img/hero.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>

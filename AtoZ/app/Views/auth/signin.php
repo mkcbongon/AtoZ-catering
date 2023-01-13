@@ -1,48 +1,66 @@
-<?=$this->include('include/auth');?>
-<body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
-    <div class="main">
+     <!-- Favicon -->
+     <link href="img/logofinal.png" rel="icon">
 
-        <section class="signup">
-            
-            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="<?=base_url();?>/auth/css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="<?=base_url();?>/auth/css/login_style.css">
+
+    <title>A to Z | Sign in </title>
+  </head>
+  <body>
+
+
+    <div class="d-lg-flex half">
+        <div class="bg order-1 order-md-2" style="background-image: url('/auth/images/bg_2.jpg');"></div>
+        <div class="contents order-2 order-md-1">
+
             <div class="container">
-                <div class="signup-content">
-               
-                    <form method="POST" id="signup-form" class="signup-form">
-                        <h2 class="form-title">Create account</h2>
-                        <div class="form-group">
-                            <input type="text" class="form-input" name="name" id="name" placeholder="Your Name"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-input" name="password" id="password" placeholder="Password"/>
-                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-input" name="re_password" id="re_password" placeholder="Repeat your password"/>
-                            <span toggle="#re_password" class="zmdi zmdi-eye field-icon toggle-password"></span>
-                        </div>
-                        <div class="form-group">
-                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" name="submit" id="submit" class="btn btn-primary form-control" value="Sign up"/>
-                        </div>
+                <div class="row align-items-center justify-content-center">
+                <div class="col-md-7">
+                    <h1 class="text-center mb-2" >LOG IN</h1>
+
+                    <?php if(session()->getFlashdata('msg')):?>
+                            <div class="alert alert-warning">
+                            <?= session()->getFlashdata('msg') ?>
+                            </div>
+                        <?php endif;?>
+
+                    <form action="<?php echo base_url(); ?>/SigninController/loginAuth" method="post">
+                    <div class="form-group first">
+                        <label for="username">Username</label>
+                            <input type="email" name="email" placeholder="Email" value="<?= set_value('email') ?>" class="form-control" >
+                    </div>
+                    <div class="form-group last mb-3">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" placeholder="Password" class="form-control" >
+                    </div>
+                    
+                    <div class="d-flex mb-5 align-items-center">
+                        
+                        <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span> 
+                    </div>
+
+                    <input type="submit" value="Log In" class="btn btn-block btn-primary">
+
                     </form>
-                    <p class="loginhere">
-                        Have already an account ? <a href="#" class="loginhere-link">Login here</a>
-                    </p>
+                </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-    <?=$this->include('include/user/user_end');?>
-
-
-    
-</body>
+        
+    </div>
+  
+ 
+  </body>
 </html>

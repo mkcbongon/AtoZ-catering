@@ -33,22 +33,13 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-              <?php if(!empty(session()->getFlashdata('fail'))): ?>
-                        <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
-                    <?php endif ?>
-
-                    <?php if(!empty(session()->getFlashdata('success'))): ?>
-                        <div class="alert alert-success alert-dismissible"><a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a><?= session()->getFlashdata('success'); ?></div>
-                    <?php endif ?>
-        
         <div class="row">
-          <div class="col mb-2">
-               <button type="button" class="btn btn-success mb-2" data-toggle="modal" data-target="#addModal">Add New</button>
-          </div>
           <div class="col-12">
-               
             <div class="card">
-             
+              <div class="card-header bg-gradient-danger">
+                <h3 class="card-title">Package List</h3>
+                <a href="" class="btn btn-primary float-right"><i class="nav-icon fa-solid fa-plus"></i></a>
+              </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
@@ -100,60 +91,6 @@
           </div>
           <!-- /.col -->
         </div>
-
-           <!-- Modal Add Product-->
-            <form action="<?=base_url('new_package');?>" method="post" enctype="multipart/form-data">
-                <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                    <div class="modal-header bg-gradient-danger">
-                        <h5 class="modal-title" id="exampleModalLabel">Add New Package</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="form-group">
-                        <label for="">Package Name</label>
-                        <input type="text" name="package_name" placeholder="Package Name" class="form-control">
-                      </div>
-
-                      <div class="form-group">
-                        <label for="">Package Details</label>
-                        <input type="text" name="package_details" placeholder="Package Details" class="form-control">
-                      </div>
-
-                      <div class="form-group">
-                        <label for="">Package Amount</label>
-                        <input type="text" name="package_amount" placeholder="Package Amount" class="form-control">
-                      </div>
-
-                      <div class="form-group">
-                        <label for="">Package Image</label>
-                        <input type="file" id="package_image" name="package_image" accept="image/png, image/jpeg" class="form-control">
-                      </div>
-
-                      <div class="form-group">
-                        <label for="">Package Availability</label>
-                        <select  id="" name="package_availability" class="form-control">
-                        <option value="">-Select-</option>
-                        <option value="">Available</option>
-                        <option value="">Not Available</option>
-                        </select>
-                      </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save</button>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </form>
-            <!-- End Modal Add Product-->
-
-
         <!-- /.row -->
       </div>
       <!-- /.container-fluid -->
