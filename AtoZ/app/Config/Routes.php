@@ -35,45 +35,30 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+
 /*
  * --------------------------------------------------------------------
  * Route Definitions
  * --------------------------------------------------------------------
  */
-// Guest Router
+// <----- Guest Routes ----->
 $routes->get('/', 'GuestController::index');
-$routes->get('about', 'GuestController::about');
-$routes->get('guest_service', 'GuestController::service');
-$routes->get('menu', 'GuestController::menu');
-$routes->get('pages', 'GuestController::pages');
-$routes->get('contact', 'GuestController::contact');
-$routes->get('signin', 'GuestController::signin');
 
-
- // User Router
-$routes->get('/', 'UserController::index');
-$routes->get('about', 'UserController::about');
-$routes->get('service', 'UserController::service');
-$routes->get('menu', 'UserController::menu');
-$routes->get('pages', 'UserController::pages');
-$routes->get('contact', 'UserController::contact');
+// User Routes
+$routes->get('/user', 'UserController::index');
 
 $routes->get('/', 'SignupController::index');
-$routes->get('/register', 'SignupController::index');
+$routes->get('/signup', 'SignupController::index');
 $routes->match(['get', 'post'], 'SignupController/store', 'SignupController::store');
 $routes->match(['get', 'post'], 'SigninController/loginAuth', 'SigninController::loginAuth');
-$routes->get('/login', 'SigninController::index');
-$routes->get('/logout', 'SigninController::logout');
-$routes->get('/dashboard', 'ProfileController::index');
+$routes->get('/signin', 'SigninController::index');
+$routes->get('/logout', 'SigninController::logout',['filter' => 'authGuard']);
 
-$routes->match(['get', 'post'], '/AllBookings', 'TransactionController::AllBookings',['filter' => 'authGuard']);
-$routes->get('/addBookings', 'TransactionController::addBookings',['filter' => 'authGuard']);
-$routes->post('/add_Bookings', 'TransactionController::add_Bookings',['filter' => 'authGuard']);
-$routes->get('/BookingsData', 'TransactionController::BookingsData',['filter' => 'authGuard']);
-$routes->get('/addPackage', 'TransactionController::addPackage',['filter' => 'authGuard']);
-
-$routes->post('/add_package', 'PackageController::add_package',['filter' => 'authGuard']);
-$routes->get('/packageDisplay', 'PackageController::packageDisplay',['filter' => 'authGuard']);
+// <----- Admin Routes ---->
+$routes->get('/dashboard', 'AdminController::dashboard',['filter' => 'authGuard']);
+$routes->get('/bookings', 'AdminController::display_bookings',['filter' => 'authGuard']);
+$routes->get('/package', 'AdminController::add_package',['filter' => 'authGuard']);
 
 
 /*
