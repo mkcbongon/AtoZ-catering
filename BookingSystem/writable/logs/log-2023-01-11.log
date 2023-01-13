@@ -1,0 +1,27 @@
+CRITICAL - 2023-01-11 07:33:53 --> Call to undefined method App\Controllers\AdminController::view()
+in APPPATH\Controllers\AdminController.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\AdminController->display_bookings()
+ 2 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 3 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-11 07:34:15 --> Undefined property: App\Controllers\AdminController::$call
+in APPPATH\Controllers\AdminController.php on line 21.
+ 1 APPPATH\Controllers\AdminController.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AdminController::$call', 'APPPATH\\Controllers\\AdminController.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\AdminController->display_bookings()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-11 07:34:31 --> Undefined variable $booking
+in APPPATH\Views\admin\bookings.php on line 75.
+ 1 APPPATH\Views\admin\bookings.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $booking', 'APPPATH\\Views\\admin\\bookings.php', 75)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\bookings.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/bookings', [], true)
+ 5 APPPATH\Controllers\AdminController.php(21): view('admin/bookings')
+ 6 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\AdminController->display_bookings()
+ 7 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
