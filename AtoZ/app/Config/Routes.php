@@ -59,6 +59,8 @@ $routes->get('/logout', 'SigninController::logout',['filter' => 'authGuard']);
 $routes->get('/dashboard', 'AdminController::dashboard',['filter' => 'authGuard']);
 $routes->get('/bookings', 'AdminController::display_bookings',['filter' => 'authGuard']);
 $routes->get('/package', 'AdminController::add_package',['filter' => 'authGuard']);
+$routes->post('/new_package', 'AdminController::new_package',['filter' => 'authGuard']);
+
 
 
 /*
