@@ -1,0 +1,8 @@
+CRITICAL - 2023-01-07 01:49:19 --> Undefined property: App\Controllers\ProfileController::$call
+in APPPATH\Controllers\ProfileController.php on line 14.
+ 1 APPPATH\Controllers\ProfileController.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\ProfileController::$call', 'APPPATH\\Controllers\\ProfileController.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(925): App\Controllers\ProfileController->dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(480): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
