@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="<?=base_url('admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css');?>">
   <link rel="stylesheet" href="<?=base_url('admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css');?>">
 
+   
 
   
 </head>

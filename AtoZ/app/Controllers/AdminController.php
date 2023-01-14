@@ -23,7 +23,11 @@ class AdminController extends Controller
     }
     public function add_package()
     {
-        return view('admin/package');
+        $package = new PackageModel();
+        $package_data = [
+            'package'=>$package->findAll()
+        ];
+        return view('admin/package', $package_data);
     }
 
     public function new_package()
@@ -35,7 +39,8 @@ class AdminController extends Controller
         $package_availability = $this->request->getPost('package_availability');
 
         $package_image->move(FCPATH . 'uploads');
-        $pakage_data = [
+        $pakage_data =
+        [
             'package_name' => $package_name,
             'package_details' =>$package_details,
             'package_amount' => $package_amount,
@@ -47,13 +52,17 @@ class AdminController extends Controller
             $model = new PackageModel();
             $model->save($pakage_data);
 
-            if(!$model){
+            if(!$model)
+            {
                 return redirect()->back()->with('fail, something went wrong!');
             }
-            else{
+            else
+            {
                 
                 return redirect()->to("package")->with('success', 'Successfully Added!');
                 
             }
     }
+
+    
 }

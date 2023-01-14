@@ -33,6 +33,13 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
+         <?php if(!empty(session()->getFlashdata('fail'))): ?>
+                        <div class="alert alert-danger"><?= session()->getFlashdata('fail'); ?></div>
+           <?php endif ?>
+
+                    <?php if(!empty(session()->getFlashdata('success'))): ?>
+                        <div class="alert alert-success alert-dismissible"><a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a><?= session()->getFlashdata('success'); ?></div>
+                    <?php endif ?>
         <div class="row">
               <div class="col">
                  <button type="button" class="btn btn-success mb-2" data-toggle="modal" data-target="#addModal">Add New</button>
@@ -52,26 +59,28 @@
                             <th>Amount</th>
                             <th>Image</th>
                             <th>Availability</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
 
                   <tbody>
+                      <?php foreach($package as $pack): ?>
                         <tr>
-                            <td>01</td>
-                            <td>Package 1</td>
-                            <td>Fried Chicken, Siomai</td>
-                            <td>2,500</td>
-                            <td>image 1</td>
-                            <td>Available</td>
+                            <td><?=$pack['package_id']?></td>
+                            <td><?=$pack['package_name']?></td>
+                            <td><?=$pack['package_details']?></td>
+                            <td><?=$pack['package_amount']?></td>
+                            <td><img src="uploads/<?= $pack['package_image']?>" height="80" width="80" alt=""></td>
+                            <td><?=$pack['package_availability']?></td>
+                            <td>
+                            <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
+                            <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                            <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+
+
+                            </td>
                         </tr>
-                        <tr>
-                            <td>02</td>
-                            <td>Combo</td>
-                            <td>1kl Pancit Malabon</td>
-                            <td>3,500</td>
-                            <td>Malabon.jpg</td>
-                            <td>Available</td>
-                        </tr>
+                        <?php endforeach;?>
                     </tbody>
 
                     <tfoot>
@@ -82,6 +91,7 @@
                             <th>Amount</th>
                             <th>Image</th>
                             <th>Availability</th>
+                            <th>Action</th>
                         </tr>
                     </tfoot>
                 </table>
@@ -131,8 +141,8 @@
                             <label>Package Availability</label>
                             <select name="package_availability" class="form-control">
                                 <option value="">-Select-</option>
-                                <option value="">Available</option>
-                                <option value="">Not Available</option>
+                                <option value="Available">Available</option>
+                                <option value="Not Available">Not Available</option>
                                 
                             </select>
                         </div>
