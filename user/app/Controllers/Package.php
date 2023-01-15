@@ -17,20 +17,20 @@ class Package extends BaseController
     } 
 
 
-    public function search($id = null) {
-        $model = new Package_model();
-        $data = $model->where('id', $id)->first();
-        var_dump($data);
-    }
+    // public function search($id = null) {
+    //     $model = new Package_model();
+    //     $data = $model->where('id', $id)->first();
+    //     var_dump($data);
+    // }
 
 
-    public function user_package() {
-        $model = new Package_model();
-        $data = [
-            'item' => $model->findAll()
-        ];
-        return view('user_package', $data);
-    }
+    // public function user_package() {
+    //     $model = new Package_model();
+    //     $data = [
+    //         'item' => $model->findAll()
+    //     ];
+    //     return view('user_package', $data);
+    // }
 
     // public function addToCart() {
     //     $cart = new Cart_model();
