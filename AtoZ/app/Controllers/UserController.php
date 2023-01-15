@@ -10,6 +10,12 @@ class UserController extends Controller
         echo view('user/user');
     } 
 
-
+    public function menu() {
+        $model = new Package_model();
+        $data = [
+            'item' => $model->findAll()
+        ];
+        return view('menu', $data);
+    } 
     
 }

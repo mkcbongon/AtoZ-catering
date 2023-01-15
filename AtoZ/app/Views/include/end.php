@@ -125,7 +125,10 @@ new Chart("myChartDoughnut", {
     <script src="user/js/main.js"></script>
 
            
+  <!-- Menu -->
+  <script  src="user/js/script.js"></script>
 
+  
 
 
     

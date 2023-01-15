@@ -42,7 +42,16 @@ $routes->set404Override();
  */
 // User Router
 $routes->get('/', 'UserController::index');
+$session = session();
+    if (session()->get('isLoggedIn')){
+        $routes->get('/menu', 'UserController::menu', ['filter'=>'authGuard']);
+    }
+    else {
+        $routes->get('/menu', 'UserController::menu');
+    }
 
+
+// Authorization
 $routes->get('/', 'SignupController::index');
 $routes->get('/register', 'SignupController::index');
 $routes->match(['get', 'post'], 'SignupController/store', 'SignupController::store');
