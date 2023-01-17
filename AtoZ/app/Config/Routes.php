@@ -46,7 +46,22 @@ $routes->set404Override();
 $routes->get('/', 'GuestController::index');
 
 // User Routes
+<<<<<<< Updated upstream
 $routes->get('/user', 'UserController::index');
+=======
+$routes->get('/', 'UserController::index');
+
+$session = session();
+    if (session()->get('isLoggedIn')){
+        $routes->get('/', 'UserController::user', ['filter'=>'authGuard']);
+        $routes->get('/menu', 'UserController::menu', ['filter'=>'authGuard']);
+    }
+    else {
+        $routes->get('/', 'UserController::user');
+        $routes->get('/menu', 'UserController::menu');
+    }
+>>>>>>> Stashed changes
+
 
 $routes->get('/', 'SignupController::index');
 $routes->get('/signup', 'SignupController::index');

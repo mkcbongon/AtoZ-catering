@@ -34,4 +34,5 @@
 
     <!-- Template Stylesheet -->
     <link href="<?=base_url();?>/guest/css/style.css" rel="stylesheet">
+    <link href="<?=base_url();?>/user/css/style1.css" rel="stylesheet">
 </head>
