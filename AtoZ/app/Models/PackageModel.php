@@ -6,9 +6,9 @@ use CodeIgniter\Model;
 class PackageModel extends Model
 {
 
-    protected $table = 'package_tb';
-    protected $primaryKey = 'ID';
-    protected $allowedFields = ['packagename', 'goodfor', 'description', 'price', 'image'];
+    protected $table = 'package';
+    protected $primaryKey = 'package_id';
+    protected $allowedFields = ['package_name', 'package_details', 'package_amount', 'package_image', 'package_availability'];
 
     
 }

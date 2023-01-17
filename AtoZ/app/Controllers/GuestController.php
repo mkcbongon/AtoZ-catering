@@ -2,11 +2,11 @@
 namespace App\Controllers;  
 use CodeIgniter\Controller;
   
-class UserController extends Controller
+class GuestController extends Controller
 {
     public function index()
     {
-       return view('user/index');
+       return view('guest/index');
     }
     
 }
