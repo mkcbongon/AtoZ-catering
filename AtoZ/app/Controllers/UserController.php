@@ -9,6 +9,7 @@ class UserController extends Controller
     {
        return view('user/index');
     }
+
     public function menu(){
         $model = new PackageModel();
         $data=[
@@ -16,5 +17,6 @@ class UserController extends Controller
         ];
         return view('user/menu', $data);
     }
+    
     
 }

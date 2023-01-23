@@ -47,7 +47,6 @@ $routes->set404Override();
 
 // User Routes
 $routes->get('/', 'UserController::index');
-
 $session = session();
     if (session()->get('isLoggedIn')){
         $routes->get('/', 'UserController::user', ['filter'=>'authGuard']);
