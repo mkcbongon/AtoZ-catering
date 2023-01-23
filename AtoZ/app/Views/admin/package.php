@@ -1,5 +1,7 @@
 <!-- <----- Admin Header ----->
+<title>A to Z | Package</title>
 <?=$this->include('include/admin/admin_header');?>
+
 <!-- <----- End Admin Header ----->
 
 <body class="hold-transition sidebar-mini">
@@ -75,9 +77,6 @@
                             <td>
                             <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
                             <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                            <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-
-
                             </td>
                         </tr>
                         <?php endforeach;?>
@@ -109,8 +108,8 @@
                 <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Add New Package</h5>
+                    <div class="modal-header " style="background-color: #FEA116">
+                        <h5 class="modal-title font-weight-bold" id="exampleModalLabel">Add New Package</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
@@ -157,6 +156,7 @@
                 </div>
             </form>
     <!-- End Modal Add Product-->
+
       </div>
       <!-- /.container-fluid -->
     </section>

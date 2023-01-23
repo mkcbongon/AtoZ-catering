@@ -24,8 +24,9 @@
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-
-                    <div class="nav-item dropdown">
+                    <?php $session = session(); ?>
+                    <?php if (session()->get('isLoggedIn')): ?>
+                        <div class="nav-item dropdown">
                         <a class="nav-link" data-toggle="dropdown" href="#">
                             <strong><?= session()->get('name') ?></strong>
                             <img src="/img/logofinal.png" alt="" style="height: 40px;"> 
@@ -45,6 +46,13 @@
                             </a>
                         </div>
                     </div>
+                    <?php else: ?>
+                    <a href="signin" class="btn btn-primary">Sign IN</a>
+                    <?php endif ?>
+
+                    
+
+                   
 
                 </div>
             </nav>

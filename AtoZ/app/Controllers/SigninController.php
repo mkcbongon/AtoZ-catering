@@ -39,7 +39,7 @@ class SigninController extends Controller
                 }
                 else
                 {
-                    return redirect()->to('/user');
+                    return redirect()->to('/');
                 }
                 
                 

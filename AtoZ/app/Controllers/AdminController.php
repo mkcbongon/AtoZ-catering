@@ -64,5 +64,33 @@ class AdminController extends Controller
             }
     }
 
+    public function package_update()
+    {
+        $model = new PackageModel();
+            $id = $this->request->getPost('package_name');
+            $data = array(
+                'product_name'        => $this->request->getPost('product_name'),
+                'package_details'       => $this->request->getPost('package_details'),
+                'package_amount'       => $this->request->getPost('package_amount'),
+                'package_image'       => $this->request->getFile('package_image'),
+                'product_price'       => $this->request->getPost('product_price'),
+                'package_availability' => $this->request->getPost('package_availability'),
+            );
+            $model->updateProduct($data, $id);
+            $model->save($data);
+
+            if(!$model)
+            {
+                return redirect()->back()->with('fail, something went wrong!');
+            }
+            else
+            {
+                
+                return redirect()->to("package")->with('success', 'Successfully Added!');
+                
+            }
+        
+    }
+
     
 }

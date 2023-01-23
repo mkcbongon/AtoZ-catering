@@ -42,12 +42,12 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>150,000.00</h3>
+                <h3>20,000.00</h3>
 
                 <p>Monthly Earnings</p>
               </div>
               <div class="icon">
-                  <i class="fa-solid fa-peso-sign"></i>
+                <i class="fa-sharp fa-solid fa-chart-simple"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -77,7 +77,7 @@
                 <p>Bookings</p>
               </div>
               <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <i class="fa fa-calendar-days"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -102,18 +102,6 @@
         </div>
         <!-- /.row -->
         <!-- Main row -->
-
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12">
-            <div class="col-sm-6">
-            <h1 class="m-0">Calendar</h1>
-          </div><!-- /.col -->
-            <?=$this->include('admin/calendar');?>
-            </div>
-          </div>
-
-        </div>
 
         
     </section>

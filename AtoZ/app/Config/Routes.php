@@ -42,13 +42,10 @@ $routes->set404Override();
  * Route Definitions
  * --------------------------------------------------------------------
  */
-// <----- Guest Routes ----->
-$routes->get('/', 'GuestController::index');
+
+
 
 // User Routes
-// <<<<<<< Updated upstream
-$routes->get('/user', 'UserController::index');
-// =======
 $routes->get('/', 'UserController::index');
 
 $session = session();
@@ -60,7 +57,6 @@ $session = session();
         $routes->get('/', 'UserController::user');
         $routes->get('/menu', 'UserController::menu');
     }
-// >>>>>>> Stashed changes
 
 
 $routes->get('/', 'SignupController::index');
