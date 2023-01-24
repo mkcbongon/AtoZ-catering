@@ -9,7 +9,7 @@
 <div class="app-container">
   <div class="app-content">
     <div class="app-content-header">
-      <h1 class="app-content-headerText">Products</h1>
+      <h1 class="app-content-headerText"></h1>
       <button class="mode-switch" title="Switch Theme">
         <svg class="moon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="24" height="24" viewBox="0 0 24 24">
           <defs></defs>
@@ -20,28 +20,9 @@
     <div class="app-content-actions">
       <div class="app-content-actions-wrapper">
         <div class="filter-button-wrapper">
-          <button class="action-button filter jsFilter"><span>Filter</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-filter"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></button>
+          <button class="action-button filter jsFilter"><span></span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-filter"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></button>
           <div class="filter-menu">
-            <label>Category</label>
-            <select>
-              <option>All Categories</option>
-              <option>Furniture</option>                     <option>Decoration</option>
-              <option>Kitchen</option>
-              <option>Bathroom</option>
-            </select>
-            <label>Status</label>
-            <select>
-              <option>All Status</option>
-              <option>Active</option>
-              <option>Disabled</option>
-            </select>
             <div class="filter-menu-buttons">
-              <button class="filter-button reset">
-                Reset
-              </button>
-              <button class="filter-button apply">
-                Apply
-              </button>
             </div>
           </div>
         </div>
@@ -97,7 +78,7 @@
           <?php if (session()->get('isLoggedIn')): ?>
             <div class="product-cell stock"><button class="btn btn-success addtocart" id="<?=$item['package_id']?>"><span class=""></span>Add to Cart</button></div>
           <?php else: ?>
-          <div class="product-cell stock"><a href="login" class="btn btn-warning"><span class=""></span>Sign in to Order</a></div>
+          <div class="product-cell stock"><a href="signin" class="btn btn-warning"><span class=""></span>Sign in to Order</a></div>
           <?php endif ?>
       </div>
       <?php endforeach; ?>
@@ -106,5 +87,48 @@
 </div>
 <!-- partial -->
 <?=$this->include('include/user/user_end');?>
+<!-- add to cart -->
+<script>    
+    $(".addtocart").on("click", function () {
+    var id = $(this).attr("package_id"); 
+    console.log(id);
+    $.post(
+      '<?=base_url()?>/addtocart',
+        // DATA TO PASS
+        {
+          id: id
+        },
+        function (data, status, xhr) {
+          console.log(data);
+          // $("#cartadd").modal();
+          Toastify({
+            text: "\u2713 Product added to cart!  ",
+            duration: 3000,
+            // destination: "https://github.com/apvarun/toastify-js",
+            // newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+              height: 23,
+              background: "linear-gradient(to right, #00c851, #00c851)",
+            },
+            onClick: function(){} // Callback after click
+          }).showToast();
+          // document.getElementById("cartcount1").innerHTML = data["total_row"];
+          // document.getElementById("cartcount2").innerHTML = data["total_row"];
+        }
+      )
+        .done(function () {
+
+        })
+
+        // TO DO ON FAIL
+        .fail(function (jqxhr, settings, ex) {
+          console.log(jqxhr);
+          alert("failed, " + ex);
+        });
+      });
 </body>
 </html>
