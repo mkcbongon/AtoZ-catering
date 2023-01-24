@@ -15,7 +15,7 @@ class UserController extends Controller
         $data=[
             'item' => $model->findAll()
         ];
-        return view('user/menu', $data);
+        return view('user/menu_old', $data);
     }
     
     
