@@ -3,18 +3,20 @@
 namespace App\Models;
 use CodeIgniter\Model;
 
-class PackageModel extends Model
+class FoodModel extends Model
 {
-    protected $table = 'package';
-    protected $primaryKey = 'package_id';
+    protected $table = 'food';
+    protected $primaryKey = 'food_id';
     protected $useAutoIncrement = 'true';
     protected $allowedFields = [
-        'user_id', 
-        'select_id', 
+        'food_name', 
+        'details', 
+        'image', 
+        'amount', 
         'availability',
-        'total', 
     ];
     protected $returnType = 'array';
 
 }
+
 ?>

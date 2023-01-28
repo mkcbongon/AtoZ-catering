@@ -45,13 +45,13 @@
         <div class="product-cell category">Package Details<button class="sort-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
           </button></div>
-        <div class="product-cell status-cell">Amount<button class="sort-button">
+        <div class="product-cell status-cell">Availability<button class="sort-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
           </button></div>
-        <div class="product-cell price">Availability<button class="sort-button">
+        <div class="product-cell price">Amount<button class="sort-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
           </button></div>
-        <div class="product-cell sales"><button class="sort-button">
+        <div class="product-cell sales">Add to Cart<button class="sort-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
           </button></div>
       </div>
@@ -61,22 +61,22 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical"><circle cx="12" cy="12" r="1"/><circle cx="12" cy="5" r="1"/><circle cx="12" cy="19" r="1"/></svg>
         </button>
           <div class="product-cell image">
-          <img src="/uploads/<?=$item['package_image']?>" alt="<?=$item['package_name']?>">
-          <span><?=$item['package_name']?></span>
+          <img src="/uploads/<?=$item['image']?>" alt="<?=$item['food_name']?>">
+          <span><?=$item['food_name']?></span>
           </div>
-        <div class="product-cell category"><span class="cell-label">Details:</span><?=$item['package_details']?></div>
+        <div class="product-cell category"><span class="cell-label">Details:</span><?=$item['details']?></div>
         <div class="product-cell status-cell">
         <span class="cell-label">Status:</span>
-          <?php if($item['package_availability']=="Available")
+          <?php if($item['availability']=="AVAILABLE")
           echo '<span class="status active">Available</span>';
           else
           echo '<span class="status disabled">Out of Stock</span>';
           ?>
         </div>
-        <div class="product-cell price"><span class="cell-label">Price:</span>₱<?=$item['package_amount']?></div>
+        <div class="product-cell price"><span class="cell-label">Price:</span>₱<?=$item['amount']?></div>
         <?php $session = session(); ?>
-          <?php if (session()->get('isLoggedIn')): ?>
-            <div class="product-cell stock"><button class="btn btn-success addtocart" id="<?=$item['package_id']?>"><span class=""></span>Add to Cart</button></div>
+          <?php if (session()->get('authGuard')): ?>
+            <div class="product-cell stock"><button class="btn btn-success addtocart" id="<?=$item['food_id']?>"><span class=""></span>Add to Cart</button></div>
           <?php else: ?>
           <div class="product-cell stock"><a href="signin" class="btn btn-warning"><span class=""></span>Sign in to Order</a></div>
           <?php endif ?>

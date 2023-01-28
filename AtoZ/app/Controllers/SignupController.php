@@ -17,8 +17,8 @@ class SignupController extends Controller
     {
         helper(['form']);
         $rules = [
-            'name'          => 'required|min_length[2]|max_length[50]',
-            'email'         => 'required|min_length[4]|max_length[100]|valid_email|is_unique[users.email]',
+            'username'          => 'required|min_length[2]|max_length[50]|is_unique[users.username]',
+            'email'         => 'required|min_length[4]|max_length[100]|valid_email',
             'password'      => 'required|min_length[4]|max_length[50]',
             'confirmpassword'  => 'matches[password]'
         ];
@@ -26,7 +26,7 @@ class SignupController extends Controller
         if($this->validate($rules)){
             $userModel = new UserModel();
             $data = [
-                'name'     => $this->request->getVar('name'),
+                'username'     => $this->request->getVar('username'),
                 'email'    => $this->request->getVar('email'),
                 'password' => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT)
             ];
@@ -34,7 +34,7 @@ class SignupController extends Controller
             return redirect()->to('/signin');
         }else{
             $data['validation'] = $this->validator;
-            echo view('signup', $data);
+            echo view('auth/signup', $data);
         }
           
     }

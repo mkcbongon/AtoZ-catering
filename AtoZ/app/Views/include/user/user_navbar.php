@@ -20,7 +20,7 @@
                     <?php if (session()->get('isLoggedIn')): ?>
                         <div class="nav-item dropdown">
                         <a class="nav-link" data-toggle="dropdown" href="#">
-                            <strong><?= session()->get('name') ?></strong>
+                            <strong><?= session()->get('username') ?></strong>
                             <img src="/img/logofinal.png" alt="" style="height: 40px;"> 
                         </a>
 
