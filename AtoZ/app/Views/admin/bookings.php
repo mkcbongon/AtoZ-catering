@@ -36,69 +36,104 @@
 
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          
-            <div class="col">
-              <button type="button" class="btn btn-success mb-2" data-toggle="modal" data-target="#addModal">Add New</button>
-             </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <div class="card shadow " >
+              <img class="card-img-top" src="../img/back.jpg" alt="Card image cap">
 
-          <div class="col-12">
-          
-            <div class="card">
-              <!-- /.card-header -->
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
-                  <thead>
-                  <tr>
-                    <th>Reservation ID</th>
-                    <th>Event ID</th>
-                    <th>User ID</th>
-                    <th>Date</th>
-                    <th>Status</th>
-                    <th>Remarks</th>
-                    <th>Action</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>01/17/2023</td>
-                    <td>Active</td>
-                    <td>Pending</td>
-                    <td>
-                      <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
-                      <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                    </td>
-                  </tr>
+                <div class="row mb-2">
                   
-                  </tbody>
-                  <tfoot>
-                  <tr>
-                    <th>Reservation ID</th>
-                    <th>Event ID</th>
-                    <th>User ID</th>
-                    <th>Date</th>
-                    <th>Status</th>
-                    <th>Remarks</th>
-                    <th>Action</th>
-                  </tr>
-                  </tfoot>
-                </table>
+                  <div class="col-4">
+                    <label for="">Date Start</label>
+                    <input type="date" name="" id="" class="form-control">
+                  </div>
+                  <div class="col-4">
+                    <label for="">Time</label>
+                    <input type="time" name="" id="" class="form-control">
+                  </div>
+                  <div class="col-4">
+                    <label for="">Date End</label>
+                    <input type="date" name="" id="" class="form-control">
+                  </div>
+                </div>
+
+                <div class="row mb-2">
+                  
+                  <div class="col-6">
+                    <label for="">Last Name</label>
+                    <input type="text" name="" id="" class="form-control" placeholder="Last Name">
+                  </div>
+                  <div class="col-6">
+                    <label for="">First Name</label>
+                    <input type="text" name="" id="" class="form-control" placeholder="Last Name">
+                  </div>
+                  
+                </div>
+
+                <div class="row mb-2">
+                  
+                  <div class="col-6">
+                    <label for="">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" class="form-control">                 
+                   </div>
+                  <div class="col-6">
+                    <label for="">Email</label>
+                    <input type="email" name="" id="" class="form-control" placeholder="Email">
+                  </div>
+                  
+                </div>
+
+                <div class="form-group">
+                  <label for="">Event Name</label>
+                  <input type="text" name="eventname" id="" placeholder="Event Name" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label for="">Event Category</label>
+                  <select name="" id="" class="form-control">
+                    <option value="">Event Category</option>
+                    <option value="">Birthday</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="">Address</label>
+                  <input type="text" name="" id="" placeholder="Address" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label for="">Package</label>
+                  <select name="" id="" class="form-control">
+                    <option value="">Package</option>
+                    <option value="">Package 1</option>
+                  </select>
+                </div>
+
+                <div class="row">
+                  <div class="col-6">
+                    <input type="submit" value="Cancel" class="btn btn-danger form-control">
+                  </div>
+                  <div class="col-6">
+                    <input type="submit" value="Reserve" class="btn btn-success form-control">
+                  </div>
+                </div>
+
+                
+
+             
+
               </div>
-              <!-- /.card-body -->
             </div>
-            <!-- /.card -->
           </div>
-          <!-- /.col -->
+
         </div>
         <!-- /.row -->
       </div>
       <!-- /.container-fluid -->
     </section>
-    <!-- /.content -->
+    <!--/section -->
   </div>
   <!-- /.content-wrapper -->
   <?=$this->include('include/admin/admin_footer');?>

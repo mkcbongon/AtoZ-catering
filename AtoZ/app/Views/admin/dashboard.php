@@ -37,25 +37,16 @@
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>20,000.00</h3>
 
-                <p>Monthly Earnings</p>
-              </div>
-              <div class="icon">
-                <i class="fa-sharp fa-solid fa-chart-simple"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
+        <div class="col-sm-6">
+            <h2 class="m-0">Earnings Summary</h2>
+          </div><!-- /.col -->
+        <div class="row">
+
+          <!-- Annualy earnings -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-success">
+            <div class="small-box bg-gradient-primary">
               <div class="inner">
                 <h3>20,000.00</h3>
 
@@ -67,14 +58,136 @@
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
+
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-gradient-secondary">
+              <div class="inner">
+                <h3>20,000.00</h3>
+
+                <p>Monthly Earnings</p>
+              </div>
+              <div class="icon">
+                <i class="fa-solid fa-peso-sign"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-primary">
+            <div class="small-box bg-gradient-success">
+              <div class="inner">
+                <h3>20,000.00</h3>
+
+                <p>Weekly Earnings</p>
+              </div>
+              <div class="icon">
+                 <i class="fa-solid fa-peso-sign"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-gradient-danger">
+              <div class="inner">
+                <h3>20,000.00</h3>
+
+                <p>Daily Earnings</p>
+              </div>
+              <div class="icon">
+                 <i class="fa-solid fa-peso-sign"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+          <!-- ./col -->
+          
+          <!-- ./col -->
+        </div>
+
+        <div class="col-sm-6">
+            <h2 class="m-0">Reservation</h2>
+        </div><!-- /.col -->
+        <div class="row">
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-gradient-primary">
               <div class="inner">
                 <h3><?=$booking['totalbooking']?></h3>
 
-                <p>Bookings</p>
+                <p>Online Reservation</p>
+              </div>
+              <div class="icon">
+              <i class="fa-regular fa-calendar-days"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+           <!-- ./col -->
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-gradient-secondary">
+              <div class="inner">
+                <h3>65</h3>
+
+                <p>Walk in Reservation</p>
+              </div>
+              <div class="icon">
+              <i class="fa-solid fa-person-walking-arrow-right"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-gradient-success">
+              <div class="inner">
+                <h3>65</h3>
+
+                <p>Pending</p>
+              </div>
+              <div class="icon">
+                 <i class="fa-solid fa-clock-rotate-left"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-gradient-danger">
+              <div class="inner">
+                <h3>65</h3>
+  
+                <p>Rejected</p>
+              </div>
+              <div class="icon">
+                 <i class="fa-solid fa-ban"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-sm-6">
+            <h2 class="m-0">Food Order</h2>
+        </div><!-- /.col -->
+        <div class="row">
+        <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-gradient-primary">
+              <div class="inner">
+                <h3><?=$booking['totalbooking']?></h3>
+
+                <p>Online Reservation</p>
               </div>
               <div class="icon">
                 <i class="fa fa-calendar-days"></i>
@@ -84,13 +197,13 @@
           </div>
 
            <!-- ./col -->
-           <div class="col-lg-3 col-6">
+          <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-danger">
+            <div class="small-box bg-gradient-secondary">
               <div class="inner">
                 <h3>65</h3>
 
-                <p>Order</p>
+                <p>Walk in Reservation</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
@@ -98,7 +211,37 @@
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
-          <!-- ./col -->
+
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-gradient-success">
+              <div class="inner">
+                <h3>65</h3>
+
+                <p>Pending</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-gradient-danger">
+              <div class="inner">
+                <h3>65</h3>
+
+                <p>Rejected</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-pie-graph"></i>
+              </div>
+              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+
         </div>
         <!-- /.row -->
         <!-- Main row -->
