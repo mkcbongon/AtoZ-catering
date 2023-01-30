@@ -34,106 +34,228 @@
       
     </section>
 
-    <!-- Main content -->
     <section class="content">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-6">
-            <div class="card shadow " >
-              <img class="card-img-top" src="../img/back.jpg" alt="Card image cap">
+      <div class="container-fluid">
+        <div class="row d-flex justify-content-center">
+
+          <!-- content starts here -->
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header p-2">
+                <ul class="nav nav-pills">
+                  <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Reservation</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab">Reservation Details</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Reservation List</a></li>
+                </ul>
+              </div><!-- /.card-header -->
 
               <div class="card-body">
-                <div class="row mb-2">
-                  
-                  <div class="col-4">
-                    <label for="">Date Start</label>
-                    <input type="date" name="" id="" class="form-control">
+                <div class="tab-content" >
+                  <div class="active tab-pane" id="activity">
+                      <div class="card mb-3">
+                        <img class="card-img-top" src="../img/back.jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <form action="" method="post">
+                            <div class="row">
+                                <div class="col-md-3">
+                                  <div class="form-group">
+                                    <label for="">Date Starts</label>
+                                    <input type="date" name="" id="" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="form-group">
+                                    <label for="">Time</label>
+                                    <input type="time" name="" id="" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="form-group">
+                                    <label for="">Date Starts</label>
+                                    <input type="date" name="" id="" class="form-control">
+                                  </div>
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="form-group">
+                                    <label for="">Event Type</label>
+                                    <select name="" id="" class="form-control">
+                                      <option value="">Event Type</option>
+                                    </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col text-center">
+                                <input type="submit" value="Reserve" class="btn btn-success form-control">
+                              </div>
+                              
+                            
+                            
+                          </div>
+
+                          </form>
+                    </div>
                   </div>
-                  <div class="col-4">
-                    <label for="">Time</label>
-                    <input type="time" name="" id="" class="form-control">
+                  <!-- /.tab-pane -->
+                  <div class="tab-pane" id="timeline">
+                    <!-- The timeline -->
+                    <div class="timeline timeline-inverse">
+                      <!-- timeline time label -->
+                      <div class="time-label">
+                        <span class="bg-danger">
+                          10 Feb. 2014
+                        </span>
+                      </div>
+                      <!-- /.timeline-label -->
+                      <!-- timeline item -->
+                      <div>
+                        <i class="fas fa-envelope bg-primary"></i>
+
+                        <div class="timeline-item">
+                          <span class="time"><i class="far fa-clock"></i> 12:05</span>
+
+                          <h3 class="timeline-header"><a href="#">Support Team</a> sent you an email</h3>
+
+                          <div class="timeline-body">
+                            Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles,
+                            weebly ning heekya handango imeem plugg dopplr jibjab, movity
+                            jajah plickers sifteo edmodo ifttt zimbra. Babblely odeo kaboodle
+                            quora plaxo ideeli hulu weebly balihoo...
+                          </div>
+                          <div class="timeline-footer">
+                            <a href="#" class="btn btn-primary btn-sm">Read more</a>
+                            <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- END timeline item -->
+                      <!-- timeline item -->
+                      <div>
+                        <i class="fas fa-user bg-info"></i>
+
+                        <div class="timeline-item">
+                          <span class="time"><i class="far fa-clock"></i> 5 mins ago</span>
+
+                          <h3 class="timeline-header border-0"><a href="#">Sarah Young</a> accepted your friend request
+                          </h3>
+                        </div>
+                      </div>
+                      <!-- END timeline item -->
+                      <!-- timeline item -->
+                      <div>
+                        <i class="fas fa-comments bg-warning"></i>
+
+                        <div class="timeline-item">
+                          <span class="time"><i class="far fa-clock"></i> 27 mins ago</span>
+
+                          <h3 class="timeline-header"><a href="#">Jay White</a> commented on your post</h3>
+
+                          <div class="timeline-body">
+                            Take me to your leader!
+                            Switzerland is small and neutral!
+                            We are more like Germany, ambitious and misunderstood!
+                          </div>
+                          <div class="timeline-footer">
+                            <a href="#" class="btn btn-warning btn-flat btn-sm">View comment</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- END timeline item -->
+                      <!-- timeline time label -->
+                      <div class="time-label">
+                        <span class="bg-success">
+                          3 Jan. 2014
+                        </span>
+                      </div>
+                      <!-- /.timeline-label -->
+                      <!-- timeline item -->
+                      <div>
+                        <i class="fas fa-camera bg-purple"></i>
+
+                        <div class="timeline-item">
+                          <span class="time"><i class="far fa-clock"></i> 2 days ago</span>
+
+                          <h3 class="timeline-header"><a href="#">Mina Lee</a> uploaded new photos</h3>
+
+                          <div class="timeline-body">
+                            <img src="https://placehold.it/150x100" alt="...">
+                            <img src="https://placehold.it/150x100" alt="...">
+                            <img src="https://placehold.it/150x100" alt="...">
+                            <img src="https://placehold.it/150x100" alt="...">
+                          </div>
+                        </div>
+                      </div>
+                      <!-- END timeline item -->
+                      <div>
+                        <i class="far fa-clock bg-gray"></i>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-4">
-                    <label for="">Date End</label>
-                    <input type="date" name="" id="" class="form-control">
+                  <!-- /.tab-pane -->
+
+                  <div class="tab-pane" id="settings">
+                    <form class="form-horizontal">
+                      <div class="form-group row">
+                        <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-10">
+                          <input type="email" class="form-control" id="inputName" placeholder="Name">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                          <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputName2" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="inputName2" placeholder="Name">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputExperience" class="col-sm-2 col-form-label">Experience</label>
+                        <div class="col-sm-10">
+                          <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputSkills" class="col-sm-2 col-form-label">Skills</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="offset-sm-2 col-sm-10">
+                          <div class="checkbox">
+                            <label>
+                              <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <div class="offset-sm-2 col-sm-10">
+                          <button type="submit" class="btn btn-danger">Submit</button>
+                        </div>
+                      </div>
+                    </form>
                   </div>
+                  <!-- /.tab-pane -->
                 </div>
-
-                <div class="row mb-2">
-                  
-                  <div class="col-6">
-                    <label for="">Last Name</label>
-                    <input type="text" name="" id="" class="form-control" placeholder="Last Name">
-                  </div>
-                  <div class="col-6">
-                    <label for="">First Name</label>
-                    <input type="text" name="" id="" class="form-control" placeholder="Last Name">
-                  </div>
-                  
-                </div>
-
-                <div class="row mb-2">
-                  
-                  <div class="col-6">
-                    <label for="">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" class="form-control">                 
-                   </div>
-                  <div class="col-6">
-                    <label for="">Email</label>
-                    <input type="email" name="" id="" class="form-control" placeholder="Email">
-                  </div>
-                  
-                </div>
-
-                <div class="form-group">
-                  <label for="">Event Name</label>
-                  <input type="text" name="eventname" id="" placeholder="Event Name" class="form-control">
-                </div>
-
-                <div class="form-group">
-                  <label for="">Event Category</label>
-                  <select name="" id="" class="form-control">
-                    <option value="">Event Category</option>
-                    <option value="">Birthday</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label for="">Address</label>
-                  <input type="text" name="" id="" placeholder="Address" class="form-control">
-                </div>
-
-                <div class="form-group">
-                  <label for="">Package</label>
-                  <select name="" id="" class="form-control">
-                    <option value="">Package</option>
-                    <option value="">Package 1</option>
-                  </select>
-                </div>
-
-                <div class="row">
-                  <div class="col-6">
-                    <input type="submit" value="Cancel" class="btn btn-danger form-control">
-                  </div>
-                  <div class="col-6">
-                    <input type="submit" value="Reserve" class="btn btn-success form-control">
-                  </div>
-                </div>
-
-                
-
-             
-
-              </div>
+                <!-- /.tab-content -->
+              </div><!-- /.card-body -->
             </div>
+            <!-- /.card -->
           </div>
-
+          <!-- /.col -->
         </div>
         <!-- /.row -->
-      </div>
-      <!-- /.container-fluid -->
+      </div><!-- /.container-fluid -->
     </section>
-    <!--/section -->
+
+    
+
+   
   </div>
   <!-- /.content-wrapper -->
   <?=$this->include('include/admin/admin_footer');?>

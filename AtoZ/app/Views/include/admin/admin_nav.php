@@ -124,7 +124,7 @@
       
       <li class="nav-item dropdown" ">
         <a class="nav-link" data-toggle="dropdown" href="#">
-          <strong class="text-black"><?= session()->get('name') ?></strong>
+          <strong class="text-black"><?= session()->get('username') ?></strong>
           <img src="/img/logofinal.png" alt="" style="height: 30px; picture-border: white"> 
         </a>
         <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">

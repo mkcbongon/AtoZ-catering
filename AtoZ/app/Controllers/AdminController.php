@@ -19,6 +19,7 @@ class AdminController extends Controller
         
     }
     public function display_bookings(){
+        
         return view('admin/bookings');
     }
     public function add_package()
@@ -90,6 +91,11 @@ class AdminController extends Controller
                 
             }
         
+    }
+
+    public function reservation(){
+       
+        return view('admin/package', $package_data);
     }
 
     
