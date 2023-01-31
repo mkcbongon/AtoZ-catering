@@ -14,7 +14,9 @@
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <a href="service.html" class="nav-item nav-link">Service</a>
                         <a href="menu" class="nav-item nav-link">Menu</a>
+                        <?php if (session()->get('isLoggedIn')): ?>
                         <a href="cart" class="nav-item nav-link">Cart</a>
+                        <?php endif ?>
                     </div>
                     <?php $session = session(); ?>
                     <?php if (session()->get('isLoggedIn')): ?>

@@ -4,6 +4,7 @@ use CodeIgniter\Controller;
 use App\Models\PackageModel;
 use App\Models\CartModel;
 use App\Models\FoodModel;
+use App\Models\UserModel;
   
 class UserController extends Controller
 {
@@ -29,18 +30,17 @@ class UserController extends Controller
     }
 
     public function addtocart() {
-        $model = new PackageModel();
+        $food = new FoodModel();
         $user = new UserModel();
         $cart = new CartModel();
-
         $session = session();
         if($username = session()->get('username')){
-            $item =  $this->request->getPost('id');
+            $item =  $this->request->getPost('food_id');
             $data = [
                 'user' => $user->where('username', $username)->first(),
-                'item' => $model->where('id', $item)->first()
+                'item' => $food->where('food_id', $item)->first()
             ];
-            $select = $cart->where(array('package_id' => $item, 'client' => $data['user']['id'], 'order_stat' => 'PENDING'))->first();
+            $select = $cart->where(array('food_id' => $item, 'client' => $data['user']['user_id'], 'order_stat' => 'PENDING'))->first();
             if($select) {
                 $set = [
                     'quantity' => $select['quantity'] + 1
@@ -49,12 +49,12 @@ class UserController extends Controller
             } 
             else {
                 $add = [
-                'package_id' => $item,
-                'img'    => $data['item']['package_img'],
-                'item'    => $data['item']['package_name'],
-                'item_stat'    => $data['item']['package_availability'],
-                'price'    => $data['item']['package_amount'],
-                'client'    => $data['user']['id']
+                'food_id' => $item,
+                'image'    => $data['item']['image'],
+                'food_name'    => $data['item']['food_name'],
+                'availability'    => $data['item']['availability'],
+                'amount'    => $data['item']['amount'],
+                'client'    => $data['user']['username']
               ];
               $cart->save($add);
             }
@@ -62,18 +62,19 @@ class UserController extends Controller
         }
     }
 
+
     public function addqty() {
-        $model = new PackageModel();
+        $user = new FoodModel();
         $user = new UserModel();
         $cart = new CartModel();
         $session = session();
         if($username = session()->get('username')){
-            $cart_id =  $this->request->getPost('id');
+            $cartid =  $this->request->getPost('cart_id');
             $qty =  $this->request->getPost('qty');
                 $set = [
                     'quantity' => $qty
-                    ];
-                    $cart->set($set)->where('cart_id', $cart_id)->update();
+                  ];
+                  $cart->set($set)->where('cart_id', $cartid)->update();
             return json_encode( $qty);
         }
     }

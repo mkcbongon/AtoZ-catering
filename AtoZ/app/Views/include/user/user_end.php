@@ -13,6 +13,6 @@
     <!-- Template Javascript -->
     <script src="<?=base_url();?>/js/script.js"></script>
     <script src="<?=base_url();?>/guest/js/main.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     
       </script>

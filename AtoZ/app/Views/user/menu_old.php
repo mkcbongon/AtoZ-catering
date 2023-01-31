@@ -76,8 +76,8 @@
         <div class="product-cell price"><span class="cell-label">Price:</span>₱<?=$item['amount']?></div>
         <?php $session = session(); ?>
           <?php if (session()->get('isLoggedIn')): ?>
-            <div class="product-cell stock"><button class="btn btn-success select" id="<?=$item['food_id']?>"><span class=""></span>Select</button></div>
-            <!-- <?php if (".select"); ?> -->
+            <div class="product-cell stock"><button class="btn btn-success addtocart" id="<?=$item['food_id']?>"><span class=""></span>Add to Cart</button></div>
+            
           <?php else: ?>
           <div class="product-cell stock"><a href="signin" class="btn btn-warning"><span class=""></span>Sign in to Proceed</a></div>
           <?php endif ?>
@@ -89,9 +89,13 @@
 <!-- partial -->
 <?=$this->include('include/user/user_end');?>
 <!-- add to cart -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script>    
     $(".addtocart").on("click", function () {
-    var id = $(this).attr("package_id"); 
+    var id = $(this).attr("food_id"); 
     console.log(id);
     $.post(
       '<?=base_url()?>/addtocart',
@@ -131,5 +135,6 @@
           alert("failed, " + ex);
         });
       });
+</script>
 </body>
 </html>
