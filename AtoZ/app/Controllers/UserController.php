@@ -54,7 +54,7 @@ class UserController extends Controller
                 'food_name'    => $data['item']['food_name'],
                 'availability'    => $data['item']['availability'],
                 'amount'    => $data['item']['amount'],
-                'client'    => $data['user']['user_id']
+                'client'    => $data['user']['username']
               ];
               $cart->save($add);
             }
