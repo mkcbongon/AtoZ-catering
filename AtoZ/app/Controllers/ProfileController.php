@@ -12,11 +12,8 @@ class ProfileController extends Controller
     }
     public function dashboard()
     {
-       
-
         $builder =  new AdminModel();
         $data['booking'] = $builder->selectCount('id','totalbooking')->first();
         return view('admin/dashboard', $data);
-        
     }
 }

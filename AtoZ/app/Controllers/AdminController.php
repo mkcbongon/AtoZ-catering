@@ -20,7 +20,12 @@ class AdminController extends Controller
     }
     public function display_bookings(){
         
-        return view('admin/bookings');
+        $package = new PackageModel();
+        $package_data = [
+            'package'=>$package->findAll()
+        ];
+        
+        return view('admin/bookings', $package_data);
     }
     public function add_package()
     {
@@ -94,8 +99,8 @@ class AdminController extends Controller
     }
 
     public function reservation(){
-       
-        return view('admin/package', $package_data);
+        
+        
     }
 
     
