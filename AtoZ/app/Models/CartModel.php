@@ -8,11 +8,12 @@ class CartModel extends Model
     protected $table = 'cart';
     protected $primaryKey = 'cart_id';
     protected $useAutoIncrement = 'true';
-    protected $allowedFields = ['package_id', 
+    protected $allowedFields = ['food_id', 
+    'food_name', 
     'image', 
-    'package_name', 
     'availability', 
     'order_stat', 
+    'amount',
     'client', 
     'contact', 
     'address', 

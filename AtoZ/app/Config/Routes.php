@@ -51,14 +51,14 @@ $session = session();
     if (session()->get('isLoggedIn')){
         $routes->get('/', 'UserController::user', ['filter'=>'authGuard']);
         $routes->get('/menu', 'UserController::menu', ['filter'=>'authGuard']);
+        $routes->get('/cart', 'UserController::cart', ['filter'=>'authGuard']);
+        $routes->match(['get', 'post'], "/addtocart", "UserController::addtocart", ['filter' =>'authGuard']);
+        $routes->match(['get', 'post'], "/addqty", "UserController::addqty", ['filter' =>'authGuard']);
     }
     else {
         $routes->get('/', 'UserController::user');
         $routes->get('/menu', 'UserController::menu');
     }
-$routes->get('/cart', 'UserController::cart', ['filter'=>'authGuard']);
-$routes->match(['get', 'post'], "/addtocart", "UserController::addtocart", ['filter' =>'authGuard']);
-$routes->match(['get', 'post'], "/addqty", "UserController::addqty", ['filter' =>'authGuard']);
 
 
 $routes->get('/', 'SignupController::index');

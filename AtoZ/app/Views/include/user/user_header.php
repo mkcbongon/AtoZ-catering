@@ -35,4 +35,5 @@
     <!-- Template Stylesheet -->
     <link href="<?=base_url();?>/guest/css/style.css" rel="stylesheet">
     <link href="<?=base_url();?>/user/css/style1.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
