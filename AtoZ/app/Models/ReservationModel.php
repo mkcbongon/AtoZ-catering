@@ -5,16 +5,23 @@ use CodeIgniter\Model;
 
 class ReservationModel extends Model
 {
-    protected $table = 'package';
-    protected $primaryKey = 'package_id';
+    protected $table = 'reservation';
+    protected $primaryKey = 'reservation_id';
     protected $allowedFields = [
-        'reservation_id',
-        'event_id',
+    
         'user_id',
+        'lastname',
+        'firstname',
         'date_start',
         'date_end',
-        'reservation_status',
-        'reservations_remarks'
+        'email',
+        'contact',
+        'event_id',
+        'pax',
+        'package_id',
+        'note',
+        'reservation_status'
+        
     ];
 
    

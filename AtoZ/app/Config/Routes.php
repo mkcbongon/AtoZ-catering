@@ -54,10 +54,13 @@ $session = session();
         $routes->get('/cart', 'UserController::cart', ['filter'=>'authGuard']);
         $routes->match(['get', 'post'], "/addtocart", "UserController::addtocart", ['filter' =>'authGuard']);
         $routes->match(['get', 'post'], "/addqty", "UserController::addqty", ['filter' =>'authGuard']);
+        $routes->match(['get', 'post'], "/reservation", "UserController::reservation", ['filter' =>'authGuard']);
+        $routes->match(['get', 'post'], "/insert_reservation", "UserController::insert_reservation", ['filter' =>'authGuard']);
     }
     else {
         $routes->get('/', 'UserController::user');
         $routes->get('/menu', 'UserController::menu');
+        $routes->get('/reservation', 'UserController::reservation');
     }
 
 
