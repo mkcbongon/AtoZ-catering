@@ -76,7 +76,7 @@
         <div class="product-cell price"><span class="cell-label">Price:</span>₱<?=$item['amount']?></div>
         <?php $session = session(); ?>
           <?php if (session()->get('isLoggedIn')): ?>
-            <div class="product-cell stock"><button class="btn btn-success addtocart" id="<?=$item['food_id']?>"><span class=""></span>Add to Cart</button></div>
+            <div class="product-cell stock"><button class="btn btn-success addtocart" id="<?=$item['id']?>"><span class=""></span>Add to Cart</button></div>
             
           <?php else: ?>
           <div class="product-cell stock"><a href="signin" class="btn btn-warning"><span class=""></span>Sign in to Proceed</a></div>
@@ -95,7 +95,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script>    
     $(".addtocart").on("click", function () {
-    var id = $(this).attr("food_id"); 
+    var id = $(this).attr("id"); 
     console.log(id);
     $.post(
       '<?=base_url()?>/addtocart',

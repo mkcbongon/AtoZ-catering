@@ -35,17 +35,17 @@ class UserController extends Controller
         $cart = new CartModel();
         $session = session();
         if($username = session()->get('username')){
-            $item =  $this->request->getPost('food_id');
+            $item =  $this->request->getPost('id');
             $data = [
                 'user' => $user->where('username', $username)->first(),
-                'item' => $food->where('food_id', $item)->first()
+                'item' => $food->where('id', $item)->first()
             ];
-            $select = $cart->where(array('food_id' => $item, 'client' => $data['user']['user_id'], 'order_stat' => 'PENDING'))->first();
+            $select = $cart->where(array('id' => $item, 'client' => $data['user']['id']))->first();
             if($select) {
                 $set = [
                     'quantity' => $select['quantity'] + 1
                   ];
-                  $cart->set($set)->where('cart_id', $select['cart_id'])->update();
+                  $cart->set($set)->where('id', $select['id'])->update();
             } 
             else {
                 $add = [
