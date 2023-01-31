@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 class CartModel extends Model
 {
     protected $table = 'cart';
-    protected $primaryKey = 'cart_id';
+    protected $primaryKey = 'id';
     protected $useAutoIncrement = 'true';
     protected $allowedFields = ['food_id', 
     'food_name', 

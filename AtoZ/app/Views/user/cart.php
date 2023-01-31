@@ -54,6 +54,9 @@
         <div class="product-cell sales">Total<button class="sort-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
           </button></div>
+        <div class="product-cell sales"><button class="sort-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 512 512"><path fill="currentColor" d="M496.1 138.3L375.7 17.9c-7.9-7.9-20.6-7.9-28.5 0L226.9 138.3c-7.9 7.9-7.9 20.6 0 28.5 7.9 7.9 20.6 7.9 28.5 0l85.7-85.7v352.8c0 11.3 9.1 20.4 20.4 20.4 11.3 0 20.4-9.1 20.4-20.4V81.1l85.7 85.7c7.9 7.9 20.6 7.9 28.5 0 7.9-7.8 7.9-20.6 0-28.5zM287.1 347.2c-7.9-7.9-20.6-7.9-28.5 0l-85.7 85.7V80.1c0-11.3-9.1-20.4-20.4-20.4-11.3 0-20.4 9.1-20.4 20.4v352.8l-85.7-85.7c-7.9-7.9-20.6-7.9-28.5 0-7.9 7.9-7.9 20.6 0 28.5l120.4 120.4c7.9 7.9 20.6 7.9 28.5 0l120.4-120.4c7.8-7.9 7.8-20.7-.1-28.5z"/></svg>
+          </button></div>
       </div>
       <?php foreach ($cart as $cart): ?>
             <?php if($cart['order_stat']=='PENDING'):?>
@@ -69,16 +72,12 @@
                 else if($cart['availability']=="NOT AVAILABLE")
                 echo '<span class="status disabled">Out of Stock</span>';
                ?></span>
-               
              </div>
-             
-             <div class="product-cell price"><span class="cell-label" >Price:</span>₱<span id = "price<?=$cart['cart_id']?>"><?=$cart['amount']?></span></div>
+             <div class="product-cell price"><span class="cell-label" >Price:</span>₱<span id = "price<?=$cart['id']?>"><?=$cart['amount']?></span></div>
              <div class="product-cell stock"><span class="cell-label"></span>
-              <!-- <button class="btn-sm" onclick="decrement()">-</button> -->
               <div class="pro-qty" >
-                <input id='<?=$cart['cart_id']?>' type=number value="<?=$cart['quantity']?>" min=1 max=100 readonly>
+                <input id='<?=$cart['id']?>' type=number value="<?=$cart['quantity']?>" min=1 max=100 readonly>
               </div>
-              <!-- <button class="btn-sm" onclick="increment()">+</button> -->
               <script>
                 function increment() {
                     document.getElementById('demoInput').stepUp();
@@ -88,8 +87,8 @@
                 }
               </script>
           </div>  
-            <div class="product-cell price"><span class="cell-label" >Total:</span><span id="total<?=$cart['cart_id']?>">₱<?=$cart['amount']*$cart['quantity']?></span></div>
-            
+            <div class="product-cell price"><span class="cell-label" >Total:</span><span id="total<?=$cart['id']?>">₱<?=$cart['amount']*$cart['quantity']?></span></div>
+            <div class="product-cell price"><span class="cell-label" ></span><a href="" class="btn btn-danger">Delete</a></span></div>
         </div>
            <?php endif; ?>
            <?php endforeach; ?>

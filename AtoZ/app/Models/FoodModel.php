@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 class FoodModel extends Model
 {
     protected $table = 'food';
-    protected $primaryKey = 'food_id';
+    protected $primaryKey = 'id';
     protected $useAutoIncrement = 'true';
     protected $allowedFields = [
         'food_name', 
