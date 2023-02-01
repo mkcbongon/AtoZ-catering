@@ -91,7 +91,7 @@ class UserController extends Controller
                 $package_data = [
                     'package'=>$package->findAll(),
                     'category' =>$category->findAll(),
-                    'user' => $user->where('user_id', session()->get('user_id'))->first()
+                    'user' => $user->first()
                 ];
                 
         return view('user/reservation', $package_data);

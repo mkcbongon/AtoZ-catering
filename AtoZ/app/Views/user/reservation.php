@@ -50,14 +50,14 @@
                                
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" name="lastname" id="lastname" value="<?=$user['lastname']?>">
+                                        <input type="text" class="form-control" id="lastname" placeholder="Last Name">
                                         <label for="lastname">LastName</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" name="firstname" id="firstname" value="<?=$user['firstname']?>">
-                                        <label for="name">First Name</label>
+                                        <input type="text" class="form-control" id="firstname" placeholder="Your Name">
+                                        <label for="name">LastName</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -73,7 +73,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" name="email" id="email" value="<?=$user['email']?>">
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
@@ -85,7 +85,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                         <select class="form-select" id="select1" name="event_id">
+                                         <select class="form-select" id="select1">
                                             <?php foreach($category as $cater): ?>
                                           <option value="<?=$cater['event_id'];?>"><?=$cater['event_name'];?></option>
                                           <?php endforeach; ?>
@@ -103,7 +103,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                         <select class="form-select" id="select1" name="package_id">
+                                         <select class="form-select" id="select1">
                                             <?php foreach($package as $pack): ?>
                                           <option value="<?=$pack['package_id'];?>"><?=$pack['package_name'];?></option>
                                           <?php endforeach;?>

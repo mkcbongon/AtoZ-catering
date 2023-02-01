@@ -60,7 +60,8 @@ $session = session();
     else {
         $routes->get('/', 'UserController::user');
         $routes->get('/menu', 'UserController::menu');
-        $routes->get('/reservation', 'UserController::reservation');
+        $routes->match(['get', 'post'], "/reservation", "UserController::reservation");
+
     }
 
 

@@ -13,7 +13,9 @@
                         <a href="/" class="nav-item nav-link active">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <a href="service.html" class="nav-item nav-link">Service</a>
-                        
+                        <?php if (session()->get('isLoggedIn')): ?>
+                        <a href="reservation" class="nav-item nav-link">Reservation</a>
+                        <?php endif ?>
                         <a href="menu" class="nav-item nav-link">Menu</a>
                         <?php if (session()->get('isLoggedIn')): ?>
                         <a href="cart" class="nav-item nav-link">Cart</a>
@@ -21,7 +23,7 @@
                     </div>
                     <?php $session = session(); ?>
                     <?php if (session()->get('isLoggedIn')): ?>
-                        <a href="reservation" class="nav-item nav-link">Reservation</a>
+                       
                         
                         <div class="nav-item dropdown">
                         <a class="nav-link" data-toggle="dropdown" href="#">

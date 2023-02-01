@@ -23,15 +23,10 @@ class AdminController extends Controller
         
         $reservation = new ReservationModel();
         $data = [
-            'reserv'=>$reservation
-            ->select('*, reservation.reservation_id')
-            ->join('users', 'reservation.user_id = users.user_id', 'inner')
-            ->join('package', 'reservation.package_id = package.package_id', 'inner')
-            ->get()->getResultArray()
+            'reserv'=>$reservation->findAll()
         ];
         
-        // return view('admin/bookings', $data);
-        var_dump($data['reserv']);
+        return view('admin/bookings', $data);
     }
     public function add_package()
     {
