@@ -50,14 +50,14 @@
                                
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name">
+                                        <input type="text" class="form-control" name="lastname" id="lastname" value="<?=$user['lastname']?>">
                                         <label for="lastname">LastName</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Your Name">
-                                        <label for="name">LastName</label>
+                                        <input type="text" class="form-control" name="firstname" id="firstname" value="<?=$user['firstname']?>">
+                                        <label for="name">First Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -73,7 +73,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
+                                        <input type="email" class="form-control" name="email" id="email" value="<?=$user['email']?>">
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>

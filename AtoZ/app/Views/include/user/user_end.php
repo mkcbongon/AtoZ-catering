@@ -16,13 +16,27 @@
     <script src="<?=base_url();?>/guest/js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
-   <script>
+   <script> 
         $('#exampleSelect2').change(function() {
       var selectedValues = $('#exampleSelect2').val();
       console.log(selectedValues);
+
+      // update pending modal
+      
+ 
     });
+    
+    <script>
+$("#editModal").on("show.bs.modal", function(event) {
+  var link = $(event.relatedTarget);
+  var name = link.data('name');
+  var modal = $(this)
+  modal.find("#name").val(name);
+
+});
+</script>
 
    </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
+
+ 

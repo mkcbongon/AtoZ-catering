@@ -3,6 +3,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\AdminModel;
 use App\Models\PackageModel;
+use App\Models\ReservationModel;
   
 class AdminController extends Controller
 {
@@ -20,12 +21,17 @@ class AdminController extends Controller
     }
     public function display_bookings(){
         
-        $package = new PackageModel();
-        $package_data = [
-            'package'=>$package->findAll()
+        $reservation = new ReservationModel();
+        $data = [
+            'reserv'=>$reservation
+            ->select('*, reservation.reservation_id')
+            ->join('users', 'reservation.user_id = users.user_id', 'inner')
+            ->join('package', 'reservation.package_id = package.package_id', 'inner')
+            ->get()->getResultArray()
         ];
         
-        return view('admin/bookings', $package_data);
+        // return view('admin/bookings', $data);
+        var_dump($data['reserv']);
     }
     public function add_package()
     {

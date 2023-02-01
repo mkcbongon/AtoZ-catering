@@ -86,9 +86,12 @@ class UserController extends Controller
 
         $package = new PackageModel();
         $category = new CategoryModel();
+        $user = new UserModel();
+
                 $package_data = [
                     'package'=>$package->findAll(),
-                    'category' =>$category->findAll()
+                    'category' =>$category->findAll(),
+                    'user' => $user->where('user_id', session()->get('user_id'))->first()
                 ];
                 
         return view('user/reservation', $package_data);
@@ -124,7 +127,7 @@ class UserController extends Controller
                 
             ];
             $reservation->save($data);
-            return redirect()->to('/reservation');
+            return redirect()->to('/reservation', $data);
 
 
 
@@ -135,6 +138,8 @@ class UserController extends Controller
         //     echo view('auth/signup', $data);
         // }
     }
+
+    
 
     
 }
