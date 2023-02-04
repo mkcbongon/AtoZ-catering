@@ -25,7 +25,7 @@ class SigninController extends Controller
             $authenticatePassword = password_verify($password, $pass);
             if($authenticatePassword){
                 $ses_data = [
-                    'user_id' => $data['user_id'],
+                    'id' => $data['id'],
                     'username' => $data['username'],
                     'email' => $data['email'],
                     'usertype' => $data['usertype'],

@@ -25,11 +25,14 @@ class UserController extends Controller
     }
 
     public function cart() {
-        $cart = new CartModel();
-        $data = [
-            'cart' => $cart->findAll()
-        ];
-        return view('user/cart', $data);
+        $cartModel = new CartModel();
+        if($username = session()->get('username')){
+            $data = [
+                'cart' => $cartModel->where(array('client' => $username))->findAll()
+            ];
+            return view('user/cart', $data);
+        }
+        
     }
 
     public function addtocart() {
@@ -57,7 +60,8 @@ class UserController extends Controller
                 'food_name'    => $data['item']['food_name'],
                 'availability'    => $data['item']['availability'],
                 'amount'    => $data['item']['amount'],
-                'client'    => $data['user']['username']
+                'client'    => $data['user']['username'],
+                'quantity'  => 1
               ];
               $cart->save($add);
             }
@@ -72,12 +76,12 @@ class UserController extends Controller
         $cart = new CartModel();
         $session = session();
         if($username = session()->get('username')){
-            $cartid =  $this->request->getPost('cart_id');
+            $cartid =  $this->request->getPost('id');
             $qty =  $this->request->getPost('qty');
                 $set = [
                     'quantity' => $qty
                   ];
-                  $cart->set($set)->where('cart_id', $cartid)->update();
+                $cart->set($set)->where('id', $cartid)->update();
             return json_encode( $qty);
         }
     }
@@ -98,6 +102,12 @@ class UserController extends Controller
         
     }
 
+    public function remove($id) {
+        $cart = new CartModel();
+        $cart->where('id', $id)->delete();
+        return redirect()->back();
+    }
+
     public function insert_reservation(){
         helper(['form']);
         // $rules = [
@@ -113,7 +123,7 @@ class UserController extends Controller
             $user = new UserModel();
             $data = [
                 
-                'user_id'     => session()->get('user_id'),
+                'id'     => session()->get('id'),
                 'lastname'     => $this->request->getVar('lastname'),
                 'firstname'     => $this->request->getVar('firstname'),
                 'date_start'     => $this->request->getVar('date_start'),

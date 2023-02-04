@@ -87,8 +87,8 @@
                 }
               </script>
           </div>  
-            <div class="product-cell price"><span class="cell-label" >Total:</span><span id="total<?=$cart['id']?>">₱<?=$cart['amount']*$cart['quantity']?></span></div>
-            <div class="product-cell price"><span class="cell-label" ></span><a href="" class="btn btn-danger">Delete</a></span></div>
+            <div class="product-cell total"><span class="cell-label">Total:</span><span id="total<?=$cart['id']?>">₱<?=$cart['amount']*$cart['quantity']?></span></div>
+            <div class="product-cell price"><span class="cell-label" ></span><a href=<?=base_url('remove/'.$cart['id']);?> class="btn btn-danger">Delete</a></span></div>
         </div>
            <?php endif; ?>
            <?php endforeach; ?>

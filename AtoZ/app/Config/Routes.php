@@ -56,6 +56,7 @@ $session = session();
         $routes->match(['get', 'post'], "/addqty", "UserController::addqty", ['filter' =>'authGuard']);
         $routes->match(['get', 'post'], "/reservation", "UserController::reservation", ['filter' =>'authGuard']);
         $routes->match(['get', 'post'], "/insert_reservation", "UserController::insert_reservation", ['filter' =>'authGuard']);
+        $routes->get('/remove/(:num)', "UserController::remove/$1", ['filter' =>'authGuard']);
     }
     else {
         $routes->get('/', 'UserController::user');
